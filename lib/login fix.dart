@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas3/navbar.dart';
+import 'package:bajulo/navbar.dart';
 class loginfix extends StatelessWidget {
   const loginfix({super.key});
 

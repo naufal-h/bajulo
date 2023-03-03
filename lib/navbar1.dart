@@ -1,7 +1,7 @@
+import 'package:bajulo/homeScreen.dart';
+import 'package:bajulo/login%20fix.dart';
 import 'package:flutter/material.dart';
-import 'package:tugas3/homeScreen.dart';
-import 'package:tugas3/login%20fix.dart';
-import 'package:tugas3/loginScreen.dart';
+
 
 class Widget028 extends StatefulWidget{
   const Widget028({Key? key}): super(key:key);
@@ -11,7 +11,7 @@ class Widget028 extends StatefulWidget{
 
 class _Widget028State extends State<Widget028> {
   int _currentIndex=0;
-  final List<Widget>_pages=[homeScreen(),login(),login(),loginfix()];
+  final List<Widget>_pages=[homeScreen(),loginfix(),loginfix(),loginfix()];
   List<Widget> body= const[
     Icon(Icons.home),
     Icon(Icons.search),

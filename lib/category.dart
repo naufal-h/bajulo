@@ -19,34 +19,35 @@ class _categoryState extends State<category> {
           categoryProduct(
             press: (){},
             text: "text",
+            
+          ),
+          // SizedBox(
+          //   height: 20,
+          // ),
+          categoryProduct(
+            press: (){},
+            text: "text2",
+          ),
+          SizedBox(
+            width: 0,
+          ),
+          categoryProduct(
+            press: (){},
+            text: "text3",
           ),
           SizedBox(
             height: 20,
           ),
           categoryProduct(
             press: (){},
-            text: "text",
+            text: "text4",
           ),
           SizedBox(
             height: 20,
           ),
           categoryProduct(
             press: (){},
-            text: "text",
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          categoryProduct(
-            press: (){},
-            text: "text",
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          categoryProduct(
-            press: (){},
-            text: "text",
+            text: "text5",
           ),
           SizedBox(
             height: 20,
