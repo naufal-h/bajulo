@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:tugas3/appBar.dart';
-import 'package:tugas3/category.dart';
+import 'package:bajulo/appBar.dart';
+import 'package:bajulo/category.dart';
 class home_body extends StatefulWidget {
   const home_body({super.key});
 
