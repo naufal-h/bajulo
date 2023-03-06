@@ -1,7 +1,10 @@
+import 'package:bajulo/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:bajulo/appBar.dart';
 import 'package:bajulo/category.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 class home_body extends StatefulWidget {
   const home_body({super.key});
 
@@ -37,7 +40,7 @@ class _home_bodyState extends State<home_body> {
               children: [
                 Text(
                   "Trending",
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  style: GoogleFonts.poppins(textStyle:TextStyle(fontSize: 20, color: Colors.white)),
                 ),
               ],
             ),
@@ -62,6 +65,14 @@ class _home_bodyState extends State<home_body> {
             height: 20,
           ),
           category(),
+          
+          //product card
+          Padding(
+            padding: const EdgeInsets.only(top: 25),
+            child: Container(
+              height: 300,
+              child: product_card()),
+          ),
         ],
       ),
     );

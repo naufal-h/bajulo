@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class category extends StatefulWidget {
   const category({super.key});
 
@@ -74,9 +75,11 @@ class categoryProduct extends StatelessWidget {
       child: GestureDetector(
         onTap: press,
         child: Container(
-          child: Chip(label: Row(
+          child: Chip(
+            backgroundColor: Color(0xffD7FC70),
+            label: Row(
             children: [
-              Text(text),
+              Text(text,style: GoogleFonts.poppins(),),
               SizedBox(
                 width: 50,
               )
