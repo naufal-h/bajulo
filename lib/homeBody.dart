@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:bajulo/appBar.dart';
 import 'package:bajulo/category.dart';
+import 'package:bajulo/product_card.dart';
 
 class home_body extends StatefulWidget {
   const home_body({super.key});
@@ -62,9 +63,7 @@ class _home_bodyState extends State<home_body> {
           //product card
           Padding(
             padding: const EdgeInsets.only(top: 25),
-            child: Container(
-              height: 300,
-              child: product_card()),
+            child: Container(height: 300, child: product_card()),
           ),
         ],
       ),
