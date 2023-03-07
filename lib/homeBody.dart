@@ -58,6 +58,13 @@ class _home_bodyState extends State<home_body> {
             height: 20,
           ),
           category(),
+          //product card
+          Padding(
+            padding: const EdgeInsets.only(top: 25),
+            child: Container(
+              height: 300,
+              child: product_card()),
+          ),
         ],
       ),
     );
