@@ -1,60 +1,62 @@
 import 'package:flutter/material.dart';
 import 'package:bajulo/navbar.dart';
+
 class loginfix extends StatelessWidget {
   const loginfix({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        backgroundColor: Color(0xFF404040),
-        appBar: AppBar(
-          toolbarHeight: kToolbarHeight + 30.0,
-          backgroundColor: Color(0xFF1F1F1F),
-          leading: IconButton(
-            padding: EdgeInsets.only(left: 30),
-            icon: Icon(Icons.keyboard_arrow_left),
-            onPressed: () {
-              // kembali
-            },
-          ),
-          title: Text("", style: TextStyle(fontFamily: "Poppins")),
-          centerTitle: true,
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenWidth = MediaQuery.of(context).size.width;
+
+    return Scaffold(
+      backgroundColor: Color(0xFF404040),
+      appBar: AppBar(
+        toolbarHeight: kToolbarHeight + 30.0,
+        backgroundColor: Color(0xFF1F1F1F),
+        leading: IconButton(
+          padding: EdgeInsets.only(left: screenWidth * 0.05),
+          icon: Icon(Icons.keyboard_arrow_left),
+          onPressed: () {
+            // kembali
+          },
         ),
-        body: Center(
+        title: Text("", style: TextStyle(fontFamily: "Poppins")),
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  margin: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Welcome back to BajuLo!',
-                    style: TextStyle(
-                        fontSize: 32.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ),
-              SizedBox(height: 25.0),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Container(
-                  margin: EdgeInsets.only(left: 20.0),
-                  child: Text(
-                    'Silahkan masukan data untuk login',
-                    style: TextStyle(fontSize: 16.0, color: Colors.grey),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ),
-              SizedBox(height: 50.0),
+              SizedBox(height: screenHeight * 0.05),
               Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+                child: Text(
+                  'Welcome back to BajuLo!',
+                  style: TextStyle(
+                    fontSize: screenHeight * 0.035,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(height: screenHeight * 0.03),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+                child: Text(
+                  'Silahkan masukan data untuk login',
+                  style: TextStyle(
+                    fontSize: screenHeight * 0.018,
+                    color: Colors.grey,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              SizedBox(height: screenHeight * 0.05),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -62,23 +64,29 @@ class loginfix extends StatelessWidget {
                       'Email',
                       style: TextStyle(
                         color: Colors.white,
+                        fontSize: screenHeight * 0.025,
                       ),
                     ),
-                    SizedBox(height: 10),
-                    TextField(
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
+                    SizedBox(height: screenHeight * 0.01),
+                    Container(
+                      width: screenWidth * 0.9,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.circular(screenHeight * 0.05),
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: screenHeight * 0.03),
               Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -86,69 +94,87 @@ class loginfix extends StatelessWidget {
                       'Password',
                       style: TextStyle(
                         color: Colors.white,
+                        fontSize: screenHeight * 0.025,
                       ),
                     ),
-                    SizedBox(height: 10),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30.0),
+                    SizedBox(height: screenHeight * 0.01),
+                    Container(
+                      width: screenWidth * 0.9,
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.circular(screenHeight * 0.05),
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: screenHeight * 0.05),
               Container(
-                margin: EdgeInsets.all(20.0),
-                height: 50.0,
-                width: double.infinity,
+                margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
                 child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Log In',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: "Poppins",
+                  onPressed: () {
+// Login button action
+                  },
+                  child: Container(
+                    height: screenHeight * 0.06,
+                    child: Center(
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                          fontSize: screenHeight * 0.025,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFFD7FC70),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
+                      borderRadius: BorderRadius.circular(screenHeight * 0.05),
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 20.0),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        color: Colors.white,
-                        decoration: TextDecoration.underline,
+              SizedBox(height: screenHeight * 0.03),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+// Forgot password button action
+                      },
+                      child: Text(
+                        'Lupa Password?',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: screenHeight * 0.018,
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(width: 220.0),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(
-                        color: Color(0xFFD7FC70),
-                        decoration: TextDecoration.underline,
+                    TextButton(
+                      onPressed: () {
+// Sign up button action
+                      },
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: screenHeight * 0.018,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
