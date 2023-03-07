@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:bajulo/notif.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -75,7 +76,12 @@ class NavBar extends StatelessWidget {
               color: Color(0xFF404040),
             ),
             title: Text('Notifications'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => notif()),
+              );
+            },
           ),
           Divider(),
           ListTile(

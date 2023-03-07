@@ -5,6 +5,7 @@ class search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade700,
       appBar: AppBar(
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
@@ -19,21 +20,20 @@ class search extends StatelessWidget {
             child: SizedBox(
               height: 37,
               child: Padding(
-                padding: const EdgeInsets.only(left: 20,right: 20,top: 15),
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
                 child: TextField(
                   decoration: InputDecoration(
-                      hintText: "Search",
-                      hintStyle: TextStyle(fontSize: 18),
-                      border: InputBorder.none,
-                      suffix: Icon(Icons.search),
-                      ),
+                    hintText: "Search",
+                    hintStyle: TextStyle(fontSize: 18),
+                    border: InputBorder.none,
+                    suffix: Icon(Icons.search),
+                  ),
                 ),
               ),
             ),
           ),
         ),
       ),
-
     );
   }
 }

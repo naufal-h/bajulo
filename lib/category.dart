@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 class category extends StatefulWidget {
   const category({super.key});
 
   @override
   State<category> createState() => _categoryState();
 }
-
-
 
 class _categoryState extends State<category> {
   @override
@@ -18,37 +17,32 @@ class _categoryState extends State<category> {
         scrollDirection: Axis.horizontal,
         children: [
           categoryProduct(
-            press: (){},
-            text: "text",
-            
+            press: () {},
+            text: "New Arrival",
           ),
           // SizedBox(
           //   height: 20,
           // ),
           categoryProduct(
-            press: (){},
-            text: "text2",
+            press: () {},
+            text: "Mens",
           ),
           SizedBox(
             width: 0,
           ),
           categoryProduct(
-            press: (){},
-            text: "text3",
+            press: () {},
+            text: "Womens",
           ),
           SizedBox(
             height: 20,
           ),
           categoryProduct(
-            press: (){},
-            text: "text4",
+            press: () {},
+            text: "All",
           ),
           SizedBox(
             height: 20,
-          ),
-          categoryProduct(
-            press: (){},
-            text: "text5",
           ),
           SizedBox(
             height: 20,
@@ -71,21 +65,23 @@ class categoryProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10,right: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10),
       child: GestureDetector(
         onTap: press,
         child: Container(
           child: Chip(
-            backgroundColor: Color(0xffD7FC70),
-            label: Row(
-            children: [
-              Text(text,style: GoogleFonts.poppins(),),
-              SizedBox(
-                width: 50,
-              )
-            ],
-          )),
-          
+              backgroundColor: Color(0xffD7FC70),
+              label: Row(
+                children: [
+                  Text(
+                    text,
+                    style: GoogleFonts.poppins(),
+                  ),
+                  SizedBox(
+                    width: 50,
+                  )
+                ],
+              )),
         ),
       ),
     );

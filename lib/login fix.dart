@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bajulo/navbar.dart';
+import 'package:bajulo/main.dart';
 
 class loginfix extends StatelessWidget {
   const loginfix({super.key});
@@ -18,7 +19,10 @@ class loginfix extends StatelessWidget {
           padding: EdgeInsets.only(left: screenWidth * 0.05),
           icon: Icon(Icons.keyboard_arrow_left),
           onPressed: () {
-            // kembali
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => myApp()),
+            );
           },
         ),
         title: Text("", style: TextStyle(fontFamily: "Poppins")),
