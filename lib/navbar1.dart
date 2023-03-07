@@ -1,5 +1,6 @@
 import 'package:bajulo/homeScreen.dart';
 import 'package:bajulo/login%20fix.dart';
+import 'package:bajulo/search.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +12,7 @@ class Widget028 extends StatefulWidget{
 
 class _Widget028State extends State<Widget028> {
   int _currentIndex=0;
-  final List<Widget>_pages=[homeScreen(),loginfix(),loginfix(),loginfix()];
+  final List<Widget>_pages=[homeScreen(),search(),loginfix(),loginfix()];
   List<Widget> body= const[
     Icon(Icons.home),
     Icon(Icons.search),
