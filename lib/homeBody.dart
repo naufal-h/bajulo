@@ -51,6 +51,7 @@ class _home_bodyState extends State<home_body> {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage("assets/images/asset 3.png"))),
+                    // tambahin asset yang lain
                   );
                 },
               );
