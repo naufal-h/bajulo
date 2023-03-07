@@ -25,8 +25,8 @@ class _Widget028State extends State<Widget028> {
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.black,
-        unselectedItemColor: Colors.grey.shade700,
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
+        unselectedItemColor: Theme.of(context).colorScheme.background,
         selectedItemColor: Colors.white,
         iconSize: 30,
         currentIndex: _currentIndex,

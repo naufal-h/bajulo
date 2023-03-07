@@ -5,11 +5,10 @@ class search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade700,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Color(0xFF1F1F1F),
         title: Padding(
           padding: const EdgeInsets.all(15),
           child: Container(

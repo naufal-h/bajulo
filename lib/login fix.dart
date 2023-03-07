@@ -11,10 +11,9 @@ class loginfix extends StatelessWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xFF404040),
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         toolbarHeight: kToolbarHeight + 30.0,
-        backgroundColor: Color(0xFF1F1F1F),
         leading: IconButton(
           padding: EdgeInsets.only(left: screenWidth * 0.05),
           icon: Icon(Icons.keyboard_arrow_left),
@@ -140,7 +139,7 @@ class loginfix extends StatelessWidget {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFD7FC70),
+                    backgroundColor: Theme.of(context).primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(screenHeight * 0.05),
                     ),

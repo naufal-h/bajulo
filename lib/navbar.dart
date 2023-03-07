@@ -1,3 +1,4 @@
+import 'package:bajulo/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/notif.dart';
 
@@ -12,7 +13,7 @@ class NavBar extends StatelessWidget {
             padding: EdgeInsets.all(15),
             width: double.infinity,
             height: 110,
-            color: Color(0xFF404040),
+            color: Theme.of(context).colorScheme.tertiary,
             alignment: Alignment.bottomCenter,
             child: Text(
               "MENU",
@@ -27,17 +28,22 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.new_releases,
-              color: Color(0xFF404040),
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('New Arrival'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProductDetails()),
+              );
+            },
           ),
           Divider(),
           ExpansionTile(
             title: Text('Men'),
             leading: Icon(
               Icons.man,
-              color: Color(0xFF404040),
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             children: [
               ListTile(
@@ -73,7 +79,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.notifications,
-              color: Color(0xFF404040),
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('Notifications'),
             onTap: () {
@@ -87,7 +93,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.settings,
-              color: Color(0xFF404040),
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('Settings'),
             onTap: () => null,
@@ -96,7 +102,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.description,
-              color: Color(0xFF404040),
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('Policies'),
             onTap: () => null,

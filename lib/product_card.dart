@@ -2,36 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class product_card extends StatelessWidget {
-  final productlist=[
+  final productlist = [
     {
       'name': 'Judul',
       'image': 'assets/images/asset 2.png',
-      'price':'10.000',
+      'price': '10.000',
     },
     {
       'name': 'Judul',
       'image': 'assets/images/asset 2.png',
-      'price':'10.000',
+      'price': '10.000',
     },
     {
       'name': 'Judul',
       'image': 'assets/images/asset 2.png',
-      'price':'10.000',
+      'price': '10.000',
     },
     {
       'name': 'Judul',
       'image': 'assets/images/asset 2.png',
-      'price':'10.000',
+      'price': '10.000',
     },
-    
   ];
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       itemCount: productlist.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      itemBuilder: (BuildContext context, int index){
-        return recent(recent_prod_image: productlist[index]['image'],recent_prod_name: productlist[index]['name'],recent_prod_price: productlist[index]['price'],);
+      gridDelegate:
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      itemBuilder: (BuildContext context, int index) {
+        return recent(
+          recent_prod_image: productlist[index]['image'],
+          recent_prod_name: productlist[index]['name'],
+          recent_prod_price: productlist[index]['price'],
+        );
       },
     );
   }
@@ -57,17 +61,20 @@ class recent extends StatelessWidget {
             height: 200,
             width: 160,
             decoration: BoxDecoration(
-              color: Colors.grey.shade700
+              color: Theme.of(context).colorScheme.background,
             ),
             child: Image.asset("assets/images/asset 2.png"),
-            
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 30),
           child: ListTile(
-            title: Text(recent_prod_name ,style: GoogleFonts.poppins(textStyle: TextStyle(color: Colors.white))) ,
-            subtitle: Text(recent_prod_price,style: GoogleFonts.poppins(textStyle: TextStyle(color: Colors.white))),
+            title: Text(recent_prod_name,
+                style: GoogleFonts.poppins(
+                    textStyle: TextStyle(color: Colors.white))),
+            subtitle: Text(recent_prod_price,
+                style: GoogleFonts.poppins(
+                    textStyle: TextStyle(color: Colors.white))),
           ),
         )
       ],

@@ -18,10 +18,9 @@ class _home_bodyState extends State<home_body> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavBar(),
-      backgroundColor: Colors.grey.shade700,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         toolbarHeight: kToolbarHeight + 30.0,
-        backgroundColor: Color(0xFF1F1F1F),
         title: Text("", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
         actions: [Icon(Icons.card_travel)],

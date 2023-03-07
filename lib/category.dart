@@ -70,7 +70,7 @@ class categoryProduct extends StatelessWidget {
         onTap: press,
         child: Container(
           child: Chip(
-              backgroundColor: Color(0xffD7FC70),
+              backgroundColor: Theme.of(context).primaryColor,
               label: Row(
                 children: [
                   Text(
