@@ -14,7 +14,7 @@ class NavBar extends StatelessWidget {
             color: Color(0xFF404040),
             alignment: Alignment.bottomCenter,
             child: Text(
-              "Menu",
+              "MENU",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22,
@@ -32,22 +32,41 @@ class NavBar extends StatelessWidget {
             onTap: () => null,
           ),
           Divider(),
-          ListTile(
+          ExpansionTile(
+            title: Text('Men'),
             leading: Icon(
               Icons.man,
               color: Color(0xFF404040),
             ),
-            title: Text('Men'),
-            onTap: () => null,
+            children: [
+              ListTile(
+                title: Text("Tops"),
+                onTap: () => null,
+              ),
+              Divider(),
+              ListTile(
+                title: Text("Bottoms"),
+                onTap: () => null,
+              ),
+            ],
           ),
-          Divider(),
-          ListTile(
+          ExpansionTile(
+            title: Text('Women'),
             leading: Icon(
-              Icons.woman,
+              Icons.man,
               color: Color(0xFF404040),
             ),
-            title: Text('Women'),
-            onTap: () => null,
+            children: [
+              ListTile(
+                title: Text("Tops"),
+                onTap: () => null,
+              ),
+              Divider(),
+              ListTile(
+                title: Text("Bottoms"),
+                onTap: () => null,
+              ),
+            ],
           ),
           Divider(),
           ListTile(

@@ -1,9 +1,8 @@
-import 'package:bajulo/product_card.dart';
+import 'package:bajulo/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:bajulo/appBar.dart';
 import 'package:bajulo/category.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class home_body extends StatefulWidget {
   const home_body({super.key});
@@ -16,21 +15,15 @@ class _home_bodyState extends State<home_body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavBar(),
       backgroundColor: Colors.grey.shade700,
       appBar: AppBar(
-          toolbarHeight: kToolbarHeight + 30.0,
-          backgroundColor: Color(0xFF1F1F1F),
-          leading: IconButton(
-            padding: EdgeInsets.only(left: 30),
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              // kembali
-            },
-          ),
-          title: Text("", style: TextStyle(fontFamily: "Poppins")),
-          centerTitle: true,
-          actions: [Icon(Icons.card_travel)],
-        ),
+        toolbarHeight: kToolbarHeight + 30.0,
+        backgroundColor: Color(0xFF1F1F1F),
+        title: Text("", style: TextStyle(fontFamily: "Poppins")),
+        centerTitle: true,
+        actions: [Icon(Icons.card_travel)],
+      ),
       body: ListView(
         children: [
           Container(
@@ -40,7 +33,7 @@ class _home_bodyState extends State<home_body> {
               children: [
                 Text(
                   "Trending",
-                  style: GoogleFonts.poppins(textStyle:TextStyle(fontSize: 20, color: Colors.white)),
+                  style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ],
             ),
@@ -60,22 +53,13 @@ class _home_bodyState extends State<home_body> {
                 },
               );
             }).toList(),
-          )
-          ,SizedBox(
+          ),
+          SizedBox(
             height: 20,
           ),
           category(),
-          
-          //product card
-          Padding(
-            padding: const EdgeInsets.only(top: 25),
-            child: Container(
-              height: 300,
-              child: product_card()),
-          ),
         ],
       ),
     );
   }
-
 }
