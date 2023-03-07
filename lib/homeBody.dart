@@ -50,7 +50,7 @@ class _home_bodyState extends State<home_body> {
                     margin: EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("assets/images/asset 1.png"))),
+                            image: AssetImage("assets/images/asset 3.png"))),
                   );
                 },
               );
