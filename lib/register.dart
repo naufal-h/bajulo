@@ -52,7 +52,7 @@ class registerPage extends StatelessWidget {
                 ),
               ),
               Text(
-                'Sign In',
+                ' Sign In',
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                   fontSize: 14,
@@ -71,7 +71,7 @@ class registerPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 20, bottom: 12),
             child: Text(
-              'Welcome to Bajulo!',
+              'Welcome to BajuLo!',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
@@ -91,7 +91,7 @@ class registerPage extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Full Name',
               style: TextStyle(
@@ -127,7 +127,7 @@ class registerPage extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Username',
               style: TextStyle(
@@ -166,7 +166,7 @@ class registerPage extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Email',
               style: TextStyle(
@@ -203,7 +203,7 @@ class registerPage extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Password',
               style: TextStyle(
@@ -245,7 +245,7 @@ class registerPage extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Repeat Password',
               style: TextStyle(
