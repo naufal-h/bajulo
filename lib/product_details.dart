@@ -7,8 +7,9 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
-  int selectedColorIndex = 0;
-  List<String> colorOptions = ['Black', 'Grey', 'Cream'];
+  int selectedColorIndex = 0, selectedSizeIndex = 0;
+  List<String> colorOptions = ['Black', 'Grey', 'Cream'],
+      sizeOptions = ['S', 'M', 'L', 'XL'];
   List<String> imagePaths = [
     'assets/images/product_1.jpg',
     'assets/images/product_2.jpg',
@@ -175,6 +176,42 @@ class _ProductDetailsState extends State<ProductDetails> {
                     fontFamily: 'poppins',
                   ),
                 ),
+                SizedBox(height: 10),
+                Row(
+                  children: sizeOptions
+                      .asMap()
+                      .entries
+                      .map(
+                        (entry) => GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedSizeIndex = entry.key;
+                            });
+                          },
+                          child: Container(
+                            height: 30,
+                            width: 30,
+                            margin: EdgeInsets.only(right: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: selectedSizeIndex == entry.key
+                                  ? Theme.of(context).primaryColor
+                                  : Colors.white,
+                            ),
+                            child: Center(
+                              child: Text(
+                                sizeOptions[entry.key],
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
               ],
             ),
           ),
@@ -260,6 +297,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                     ),
                   ),
                   expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                  iconColor: Colors.white,
+                  collapsedIconColor: Colors.white,
                   children: [
                     Container(
                       margin: EdgeInsets.only(left: 52, top: 12, bottom: 6),
