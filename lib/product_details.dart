@@ -20,9 +20,8 @@ class _ProductDetailsState extends State<ProductDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: kToolbarHeight + 30.0,
         leading: IconButton(
-          padding: EdgeInsets.only(left: 30),
+          padding: EdgeInsets.only(left: 20),
           icon: Icon(Icons.keyboard_arrow_left),
           onPressed: () {
             Navigator.push(
@@ -35,7 +34,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         centerTitle: true,
         actions: [
           IconButton(
-            padding: EdgeInsets.only(right: 45),
+            padding: EdgeInsets.only(right: 20),
             icon: Icon(Icons.favorite),
             onPressed: () {
               // pindah ke cart

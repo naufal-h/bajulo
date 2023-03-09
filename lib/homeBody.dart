@@ -20,10 +20,17 @@ class _home_bodyState extends State<home_body> {
       drawer: NavBar(),
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        toolbarHeight: kToolbarHeight + 30.0,
         title: Text("", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
-        actions: [Icon(Icons.card_travel)],
+        actions: [
+          IconButton(
+            padding: EdgeInsets.only(right: 20),
+            icon: Icon(Icons.card_travel),
+            onPressed: () {
+              // pindah ke cart
+            },
+          ),
+        ],
       ),
       body: ListView(
         children: [
