@@ -20,16 +20,6 @@ class _ProductDetailsState extends State<ProductDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          padding: EdgeInsets.only(left: 20),
-          icon: Icon(Icons.keyboard_arrow_left),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => myApp()),
-            );
-          },
-        ),
         title: Text("Produk", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
         actions: [

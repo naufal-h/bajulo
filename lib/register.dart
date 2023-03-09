@@ -1,7 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/main.dart';
-import 'package:bajulo/login fix.dart';
 
 class registerPage extends StatelessWidget {
   const registerPage({super.key});
@@ -14,16 +13,6 @@ class registerPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        leading: IconButton(
-          padding: EdgeInsets.only(left: screenWidth * 0.05),
-          icon: Icon(Icons.keyboard_arrow_left),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => myApp()),
-            );
-          },
-        ),
         title: Text("", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
       ),
@@ -33,8 +22,7 @@ class registerPage extends StatelessWidget {
         alignment: Alignment.center,
         child: TextButton(
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => loginfix()));
+            Navigator.of(context).pop();
           },
           style: TextButton.styleFrom(
             foregroundColor: Colors.white.withOpacity(0.1),

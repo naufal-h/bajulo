@@ -14,16 +14,6 @@ class loginfix extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        leading: IconButton(
-          padding: EdgeInsets.only(left: screenWidth * 0.05),
-          icon: Icon(Icons.keyboard_arrow_left),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => myApp()),
-            );
-          },
-        ),
         title: Text("", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
       ),

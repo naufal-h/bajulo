@@ -78,20 +78,6 @@ class NavBar extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(
-              Icons.notifications,
-              color: Theme.of(context).colorScheme.tertiary,
-            ),
-            title: Text('Notifications'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => notif()),
-              );
-            },
-          ),
-          Divider(),
-          ListTile(
-            leading: Icon(
               Icons.settings,
               color: Theme.of(context).colorScheme.tertiary,
             ),

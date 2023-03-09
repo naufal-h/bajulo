@@ -142,7 +142,7 @@ class _NotificationTileState extends State<NotificationTile> {
             style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
-                color: Color(0xFFD9D9D9),
+                color: Colors.white,
                 fontFamily: "Poppins"),
           ),
           trailing: IconButton(
@@ -150,7 +150,7 @@ class _NotificationTileState extends State<NotificationTile> {
                 _isExpanded
                     ? Icons.keyboard_arrow_up
                     : Icons.keyboard_arrow_down,
-                color: Color(0xFFD9D9D9)),
+                color: Colors.white),
             onPressed: () {
               setState(() {
                 _isExpanded = !_isExpanded;
@@ -166,7 +166,7 @@ class _NotificationTileState extends State<NotificationTile> {
               Text(
                 widget.subtitle,
                 style: TextStyle(
-                    color: Color(0xFFD9D9D9),
+                    color: Colors.white,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w300),
                 maxLines: 1,
@@ -174,7 +174,7 @@ class _NotificationTileState extends State<NotificationTile> {
               ),
               Text(DateFormat.yMd().add_jm().format(widget.time),
                   style: TextStyle(
-                      color: Color(0xFFD9D9D9),
+                      color: Colors.white,
                       fontSize: 12,
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w300)),
@@ -187,14 +187,13 @@ class _NotificationTileState extends State<NotificationTile> {
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
                   'Detail notifikasi',
-                  style: TextStyle(
-                      color: Color(0xFFD9D9D9), fontFamily: "Poppins"),
+                  style: TextStyle(color: Colors.white, fontFamily: "Poppins"),
                 ),
               )
             : SizedBox(),
         Divider(
           thickness: 1,
-          color: Color(0xFFD9D9D9),
+          color: Colors.white,
         ),
       ],
     );
