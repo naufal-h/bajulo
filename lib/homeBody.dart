@@ -68,7 +68,7 @@ class _home_bodyState extends State<home_body> {
           //product card
           Padding(
             padding: const EdgeInsets.only(top: 25),
-            child: Container(height: 300, child: product_card()),
+            child: Container(height: 700, child: product_card()),
           ),
         ],
       ),
