@@ -104,12 +104,12 @@ class loginfix extends StatelessWidget {
                   EdgeInsets.symmetric(vertical: 10, horizontal: 14),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.black, width: 1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(25),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide:
                     BorderSide(color: Theme.of(context).primaryColor, width: 1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(25),
               ),
               fillColor: Colors.white,
               filled: true,
@@ -141,12 +141,12 @@ class loginfix extends StatelessWidget {
                   EdgeInsets.symmetric(vertical: 10, horizontal: 14),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.black, width: 1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(25),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide:
                     BorderSide(color: Theme.of(context).primaryColor, width: 1),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(25),
               ),
               fillColor: Colors.white,
               filled: true,
@@ -191,7 +191,7 @@ class loginfix extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 36, vertical: 18),
               backgroundColor: Theme.of(context).primaryColor,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
+                  borderRadius: BorderRadius.circular(25)),
               elevation: 0,
               shadowColor: Colors.transparent,
             ),

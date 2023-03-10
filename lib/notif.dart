@@ -157,7 +157,6 @@ class _NotificationTileState extends State<NotificationTile> {
               });
             },
           ),
-          contentPadding: EdgeInsets.symmetric(horizontal: 33, vertical: 8),
           isThreeLine: true,
           dense: true,
           subtitle: Column(

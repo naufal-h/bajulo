@@ -48,7 +48,7 @@ class _home_bodyState extends State<home_body> {
           ),
           CarouselSlider(
             options: CarouselOptions(height: 200.0),
-            items: [1, 2].map((i) {
+            items: [3, 4].map((i) {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
@@ -56,8 +56,7 @@ class _home_bodyState extends State<home_body> {
                     margin: EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage("assets/images/asset 3.png"))),
-                    // tambahin asset yang lain
+                            image: AssetImage("assets/images/asset $i.png"))),
                   );
                 },
               );
