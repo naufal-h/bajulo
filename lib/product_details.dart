@@ -11,12 +11,27 @@ class _ProductDetailsState extends State<ProductDetails> {
   int selectedColorIndex = 0, selectedSizeIndex = 0;
   List<String> colorOptions = ['Black', 'Grey', 'Cream'],
       sizeOptions = ['S', 'M', 'L', 'XL'];
-  List<String> imagePaths = [
-    'assets/images/product_1.jpg',
-    'assets/images/product_2.jpg',
-    'assets/images/product_3.jpg'
+  List<List<String>> imagePaths = [
+    [
+      'assets/images/details_a1.png',
+      'assets/images/details_a2.png',
+      'assets/images/details_a3.png',
+      'assets/images/details_a4.png',
+    ],
+    [
+      'assets/images/details_b1.png',
+      'assets/images/details_b2.png',
+      'assets/images/details_b3.png',
+      'assets/images/details_b4.png',
+    ],
+    [
+      'assets/images/details_c1.png',
+      'assets/images/details_c2.png',
+      'assets/images/details_c3.png',
+      'assets/images/details_c4.png',
+    ],
   ];
-  PageController productImageSlider = PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,16 +116,22 @@ class _ProductDetailsState extends State<ProductDetails> {
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) =>
-                      productImg(imageUrl: imagePaths[selectedColorIndex]),
+                      productImg(imageUrl: imagePaths[selectedColorIndex][0]),
                 ),
               );
             },
             child: Container(
               width: MediaQuery.of(context).size.width,
+              height: 500,
               color: Colors.white,
-              child: Image.asset(
-                imagePaths[selectedColorIndex],
-                fit: BoxFit.cover,
+              child: PageView(
+                children: List.generate(
+                  imagePaths[selectedColorIndex].length,
+                  (index) => Image.asset(
+                    imagePaths[selectedColorIndex][index],
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
             ),
           ),
