@@ -81,7 +81,7 @@ class loginfix extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Email',
               style: TextStyle(
@@ -117,7 +117,7 @@ class loginfix extends StatelessWidget {
           ),
           SizedBox(height: 16),
           Container(
-            margin: EdgeInsets.only(top: 20, bottom: 12),
+            margin: EdgeInsets.only(bottom: 12),
             child: Text(
               'Password',
               style: TextStyle(

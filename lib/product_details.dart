@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'package:bajulo/product_img.dart';
 
 class ProductDetails extends StatefulWidget {
   @override
@@ -95,12 +96,22 @@ class _ProductDetailsState extends State<ProductDetails> {
           )),
       body: ListView(
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            color: Colors.white,
-            child: Image.asset(
-              imagePaths[selectedColorIndex],
-              fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) =>
+                      productImg(imageUrl: imagePaths[selectedColorIndex]),
+                ),
+              );
+            },
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              color: Colors.white,
+              child: Image.asset(
+                imagePaths[selectedColorIndex],
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Container(

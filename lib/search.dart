@@ -1,6 +1,4 @@
-import 'package:bajulo/appBar.dart';
 import 'package:flutter/material.dart';
-import 'package:bajulo/main.dart';
 import 'package:bajulo/navbar.dart';
 
 class search extends StatelessWidget {

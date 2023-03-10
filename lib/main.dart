@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:bajulo/homeScreen.dart';
-import 'package:bajulo/login fix.dart';
 import 'navbar1.dart';
 import 'package:bajulo/const/tema.dart';
 
