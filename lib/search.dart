@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bajulo/navbar.dart';
+import 'package:bajulo/product_details.dart';
 
 class search extends StatelessWidget {
   List<Map<String, dynamic>> riwayat = [
@@ -137,7 +138,13 @@ class search extends StatelessWidget {
                       direction: Axis.horizontal,
                       children: List.generate(popular.length, (index) {
                         return GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => productDetails()),
+                            );
+                          },
                           child: Container(
                             color: Theme.of(context).colorScheme.background,
                             width: MediaQuery.of(context).size.width / 2,

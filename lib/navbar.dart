@@ -31,12 +31,7 @@ class NavBar extends StatelessWidget {
               color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('New Arrival'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ProductDetails()),
-              );
-            },
+            onTap: () {},
           ),
           Divider(),
           ExpansionTile(

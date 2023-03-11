@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'package:bajulo/product_img.dart';
 
-class ProductDetails extends StatefulWidget {
+class productDetails extends StatefulWidget {
   @override
-  _ProductDetailsState createState() => _ProductDetailsState();
+  _productDetailsState createState() => _productDetailsState();
 }
 
-class _ProductDetailsState extends State<ProductDetails> {
+class _productDetailsState extends State<productDetails> {
   int selectedColorIndex = 0, selectedSizeIndex = 0;
   List<String> colorOptions = ['Black', 'Grey', 'Cream'],
       sizeOptions = ['S', 'M', 'L', 'XL'];
