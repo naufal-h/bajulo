@@ -47,7 +47,7 @@ class _home_bodyState extends State<home_body> {
           ),
           CarouselSlider(
             options: CarouselOptions(height: 200.0),
-            items: [3,4].map((i) {
+            items: [3,5].map((i) {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
