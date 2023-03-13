@@ -284,8 +284,8 @@ class _productDetailsState extends State<productDetails> {
                                   color: entry.key == 0
                                       ? Colors.black
                                       : entry.key == 1
-                                          ? Colors.grey
-                                          : Colors.amber[100],
+                                          ? Colors.amber[100]
+                                          : Colors.grey,
                                 ),
                               ),
                             ),
