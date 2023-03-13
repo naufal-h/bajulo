@@ -1,9 +1,11 @@
+import 'package:bajulo/cart.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:bajulo/category.dart';
 import 'package:bajulo/product_card.dart';
+
 
 class home_body extends StatefulWidget {
   const home_body({super.key});
@@ -25,8 +27,8 @@ class _home_bodyState extends State<home_body> {
           IconButton(
             padding: EdgeInsets.only(right: 20),
             icon: Icon(Icons.card_travel),
-            onPressed: () {
-              // pindah ke cart
+            onPressed: ()=> {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const cart()))
             },
           ),
         ],
