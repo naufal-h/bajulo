@@ -1,3 +1,4 @@
+import 'package:bajulo/cartBottomNavbar.dart';
 import 'package:bajulo/homeBody.dart';
 import 'package:bajulo/homeScreen.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -12,7 +13,7 @@ class cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade700,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: ListView(
         children: [
           AppBar(
@@ -21,19 +22,20 @@ class cart extends StatelessWidget {
           Container(
             height: 700,
             padding: EdgeInsets.only(top: 15),
-            decoration: BoxDecoration(
-              color: Colors.grey.shade700,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(35),
-                topRight: Radius.circular(35),
-              )
-            ),
+            // decoration: BoxDecoration(
+            //   color: Colors.grey.shade700,
+            //   borderRadius: BorderRadius.only(
+            //     topLeft: Radius.circular(35),
+            //     topRight: Radius.circular(35),
+            //   )
+            // ),
             child: Column(children: [
               cartItem(),
             ]),
           )
         ],
       ),
+      bottomNavigationBar: cartBottomNavbar(),
     );
   }
 }
