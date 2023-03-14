@@ -1,3 +1,4 @@
+import 'package:bajulo/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'navbar1.dart';
 import 'package:bajulo/const/tema.dart';
@@ -10,8 +11,13 @@ class myApp extends StatelessWidget {
     return MaterialApp(
       theme: Tema().themedata,
       title: "bajulo",
-      debugShowCheckedModeBanner: false,
+      // initialRoute: homeScreen.x,
       home: Widget028(),
+      // routes: {
+      //   homeScreen.x:(context) => homeScreen(),
+      // },
+      debugShowCheckedModeBanner: false,
+      
     );
   }
 }

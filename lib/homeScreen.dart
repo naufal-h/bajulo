@@ -3,6 +3,7 @@ import 'homeBody.dart';
 
 class homeScreen extends StatefulWidget {
   @override
+  static const x='/homeScreen';
   _homeScreenState createState() => _homeScreenState();
 }
 
