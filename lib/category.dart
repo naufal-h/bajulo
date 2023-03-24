@@ -1,3 +1,5 @@
+import 'package:bajulo/categorydetails.dart';
+import 'package:bajulo/layoutgrid.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,28 +19,36 @@ class _categoryState extends State<category> {
         scrollDirection: Axis.horizontal,
         children: [
           categoryProduct(
-            press: () {},
+            press: ()=>{
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+            },
             text: "New Arrival",
           ),
           // SizedBox(
           //   height: 20,
           // ),
           categoryProduct(
-            press: () {},
+           press: ()=>{
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+            },
             text: "Mens",
           ),
           SizedBox(
             width: 0,
           ),
           categoryProduct(
-            press: () {},
+            press: ()=>{
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+            },
             text: "Womens",
           ),
           SizedBox(
             height: 20,
           ),
           categoryProduct(
-            press: () {},
+            press: ()=>{
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+            },
             text: "All",
           ),
           SizedBox(

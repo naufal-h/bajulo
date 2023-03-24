@@ -1,3 +1,4 @@
+import 'package:bajulo/categorydetails.dart';
 import 'package:bajulo/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/notif.dart';
@@ -31,7 +32,9 @@ class NavBar extends StatelessWidget {
               color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('New Arrival'),
-            onTap: () {},
+            onTap: ()=>{
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+            },
           ),
           Divider(),
           ExpansionTile(

@@ -1,4 +1,5 @@
 import 'package:bajulo/cart.dart';
+import 'package:bajulo/layoutgrid.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/product_card.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +71,7 @@ class _home_bodyState extends State<home_body> {
           //product card
           Padding(
             padding: const EdgeInsets.only(top: 25),
-            child: Container(height: 700, child: product_card()),
+            child: Container(child: gridLayout()),
           ),
         ],
       ),
