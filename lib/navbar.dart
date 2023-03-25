@@ -1,7 +1,9 @@
 import 'package:bajulo/categorydetails.dart';
+import 'package:bajulo/order_hist.dart';
 import 'package:bajulo/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/notif.dart';
+import 'order_hist.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -25,15 +27,17 @@ class NavBar extends StatelessWidget {
               ),
             ),
           ),
-          Divider(),
           ListTile(
             leading: Icon(
               Icons.new_releases,
               color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('New Arrival'),
-            onTap: ()=>{
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+            onTap: () => {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const categorydetails()))
             },
           ),
           Divider(),
@@ -48,7 +52,6 @@ class NavBar extends StatelessWidget {
                 title: Text("Tops"),
                 onTap: () => null,
               ),
-              Divider(),
               ListTile(
                 title: Text("Bottoms"),
                 onTap: () => null,
@@ -66,12 +69,23 @@ class NavBar extends StatelessWidget {
                 title: Text("Tops"),
                 onTap: () => null,
               ),
-              Divider(),
               ListTile(
                 title: Text("Bottoms"),
                 onTap: () => null,
               ),
             ],
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.note,
+              color: Theme.of(context).colorScheme.tertiary,
+            ),
+            title: Text("Order History"),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const order_hist()));
+            },
           ),
           Divider(),
           ListTile(
