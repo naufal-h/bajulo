@@ -3,14 +3,14 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class gridLayoutWoman extends StatefulWidget {
-  const gridLayoutWoman({super.key});
+class gridLayoutWomanBottom extends StatefulWidget {
+  const gridLayoutWomanBottom({super.key});
 
   @override
-  State<gridLayoutWoman> createState() => _gridLayoutWomanState();
+  State<gridLayoutWomanBottom> createState() => _gridLayoutWomanBottomState();
 }
 
-class _gridLayoutWomanState extends State<gridLayoutWoman> {
+class _gridLayoutWomanBottomState extends State<gridLayoutWomanBottom> {
   final List<Map<String, dynamic>> gridMap = [
     {
       "title": "white sneaker with adidas logo",
@@ -29,12 +29,7 @@ class _gridLayoutWomanState extends State<gridLayoutWoman> {
    
    
    
-    {
-      "title": "V&V  model white t shirts.",
-      "price": "\$55",
-      "images":
-          "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    }
+    
   ];
 
   @override

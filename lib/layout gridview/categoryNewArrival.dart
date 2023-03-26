@@ -32,7 +32,7 @@ class _categoryNewArrivalState extends State<categoryNewArrival> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
        appBar: AppBar(
-        title: Text("", style: TextStyle(fontFamily: "Poppins")),
+        title: Text("New Arrival", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
         actions: [
           IconButton(

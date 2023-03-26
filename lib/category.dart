@@ -35,7 +35,7 @@ class _categoryState extends State<category> {
            press: ()=>{
               Navigator.push(context, MaterialPageRoute(builder: (context)=>const categoryMen()))
             },
-            text: "Mens",
+            text: "Men",
           ),
           SizedBox(
             width: 0,

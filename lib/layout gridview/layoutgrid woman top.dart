@@ -3,29 +3,15 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class gridLayoutWoman extends StatefulWidget {
-  const gridLayoutWoman({super.key});
+class gridLayoutWomanTop extends StatefulWidget {
+  const gridLayoutWomanTop({super.key});
 
   @override
-  State<gridLayoutWoman> createState() => _gridLayoutWomanState();
+  State<gridLayoutWomanTop> createState() => _gridLayoutWomanTopState();
 }
 
-class _gridLayoutWomanState extends State<gridLayoutWoman> {
+class _gridLayoutWomanTopState extends State<gridLayoutWomanTop> {
   final List<Map<String, dynamic>> gridMap = [
-    {
-      "title": "white sneaker with adidas logo",
-      "price": "\$255",
-      "images":
-          "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
-    },
-   
-  
-    {
-      "title": "Gamma shoes with beta brand.",
-      "price": "\$275",
-      "images":
-          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
    
    
    

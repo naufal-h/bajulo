@@ -4,6 +4,9 @@ import 'package:bajulo/layout%20gridview/categoryAll.dart';
 import 'package:bajulo/layout%20gridview/categoryMenBottom.dart';
 import 'package:bajulo/layout%20gridview/categoryMenTop.dart';
 import 'package:bajulo/layout%20gridview/categoryAll.dart';
+import 'package:bajulo/layout%20gridview/categoryNewArrival.dart';
+import 'package:bajulo/layout%20gridview/categoryWomanBottom.dart';
+import 'package:bajulo/layout%20gridview/categoryWomanTop.dart';
 import 'package:bajulo/order_hist.dart';
 import 'package:bajulo/product_details.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +45,7 @@ class NavBar extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const categorydetails()))
+                      builder: (context) => const categoryNewArrival()))
             },
           ),
           Divider(),
@@ -82,11 +85,21 @@ class NavBar extends StatelessWidget {
             children: [
               ListTile(
                 title: Text("Tops"),
-                onTap: () => null,
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const categoryWomanTop()))
+                },
               ),
               ListTile(
                 title: Text("Bottoms"),
-                onTap: () => null,
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const categoryWomanBottom()))
+                },
               ),
             ],
           ),
