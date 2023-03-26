@@ -1,4 +1,9 @@
-import 'package:bajulo/categorydetails.dart';
+import 'package:bajulo/layout gridview/categoryMenBottom.dart';
+import 'package:bajulo/layout gridview/categoryMenTop.dart';
+import 'package:bajulo/layout gridview/categorydetails.dart';
+import 'package:bajulo/layout%20gridview/categoryMenBottom.dart';
+import 'package:bajulo/layout%20gridview/categoryMenTop.dart';
+import 'package:bajulo/layout%20gridview/categorydetails.dart';
 import 'package:bajulo/order_hist.dart';
 import 'package:bajulo/product_details.dart';
 import 'package:flutter/material.dart';
@@ -50,11 +55,21 @@ class NavBar extends StatelessWidget {
             children: [
               ListTile(
                 title: Text("Tops"),
-                onTap: () => null,
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const categoryMenTop()))
+                },
               ),
               ListTile(
                 title: Text("Bottoms"),
-                onTap: () => null,
+                onTap: () => {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const categoryMenBottom()))
+                },
               ),
             ],
           ),

@@ -1,6 +1,9 @@
 import 'package:bajulo/cart.dart';
 import 'package:bajulo/homeScreen.dart';
-import 'package:bajulo/layoutgrid.dart';
+import 'package:bajulo/layout gridview/layoutgrid%20men%20bottom.dart';
+import 'package:bajulo/layout gridview/layoutgrid%20men%20top.dart';
+import 'package:bajulo/layout gridview/layoutgrid.dart';
+import 'package:bajulo/layout%20gridview/layoutgrid%20men.dart';
 import 'package:bajulo/login%20fix.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/navbar1.dart';
@@ -10,14 +13,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class categorydetails extends StatefulWidget {
-  const categorydetails({super.key});
+class categoryMen extends StatefulWidget {
+  const categoryMen({super.key});
 
   @override
-  State<categorydetails> createState() => _categorydetailsState();
+  State<categoryMen> createState() => _categoryMenState();
 }
 
-class _categorydetailsState extends State<categorydetails> {
+class _categoryMenState extends State<categoryMen> {
   @override
   Widget build(BuildContext context) {
   //   int _currentIndex = 0;
@@ -46,7 +49,7 @@ class _categorydetailsState extends State<categorydetails> {
       body: ListView(
         children: [
           Container(
-            child: gridLayout(),
+            child: gridLayoutMen(),
           )
         ],
       ),

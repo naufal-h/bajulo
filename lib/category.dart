@@ -1,5 +1,8 @@
-import 'package:bajulo/categorydetails.dart';
-import 'package:bajulo/layoutgrid.dart';
+import 'package:bajulo/layout gridview/categorydetails.dart';
+import 'package:bajulo/layout%20gridview/categoryMen.dart';
+import 'package:bajulo/layout%20gridview/categoryWoman.dart';
+import 'package:bajulo/layout%20gridview/categorydetails.dart';
+import 'package:bajulo/layout gridview/layoutgrid.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -29,7 +32,7 @@ class _categoryState extends State<category> {
           // ),
           categoryProduct(
            press: ()=>{
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categoryMen()))
             },
             text: "Mens",
           ),
@@ -38,7 +41,7 @@ class _categoryState extends State<category> {
           ),
           categoryProduct(
             press: ()=>{
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categoryWoman()))
             },
             text: "Womens",
           ),

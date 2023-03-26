@@ -1,4 +1,4 @@
-import 'package:bajulo/categorydetails.dart';
+
 import 'package:bajulo/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'navbar1.dart';
