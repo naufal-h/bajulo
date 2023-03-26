@@ -1,7 +1,7 @@
 import 'package:bajulo/cart.dart';
 import 'package:bajulo/homeScreen.dart';
 import 'package:bajulo/layout gridview/layoutgrid%20men%20top.dart';
-import 'package:bajulo/layout gridview/layoutgrid.dart';
+import 'package:bajulo/layout%20gridview/layoutgridAll.dart';
 import 'package:bajulo/layout%20gridview/layoutgrid%20woman.dart';
 import 'package:bajulo/login%20fix.dart';
 import 'package:bajulo/navbar.dart';

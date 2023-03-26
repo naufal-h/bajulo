@@ -3,21 +3,16 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class gridLayoutMenTop extends StatefulWidget {
-  const gridLayoutMenTop({super.key});
+class gridLayoutNewArrival extends StatefulWidget {
+  const gridLayoutNewArrival({super.key});
 
   @override
-  State<gridLayoutMenTop> createState() => _gridLayoutMenTopState();
+  State<gridLayoutNewArrival> createState() => _gridLayoutNewArrivalState();
 }
 
-class _gridLayoutMenTopState extends State<gridLayoutMenTop> {
+class _gridLayoutNewArrivalState extends State<gridLayoutNewArrival> {
   final List<Map<String, dynamic>> gridMap = [
-    {
-      "title": "Alpha t-shirt for alpha testers.",
-      "price": "\$25",
-      "images":
-          "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
+    
     {
       "title": "vivastudio.",
       "price": "\$55",

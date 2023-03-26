@@ -53,6 +53,18 @@ class _gridLayoutState extends State<gridLayout> {
       "price": "\$55",
       "images":
           "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    },
+    {
+      "title": "vivastudio.",
+      "price": "\$55",
+      "images":
+          "assets/images/produk3.png",
+    },
+    {
+      "title": "grooverhyme",
+      "price": "\$55",
+      "images":
+          "assets/images/produk2.png",
     }
   ];
 

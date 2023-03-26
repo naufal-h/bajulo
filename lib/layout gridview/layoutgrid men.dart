@@ -53,7 +53,13 @@ class _gridLayoutMenState extends State<gridLayoutMen> {
       "price": "\$55",
       "images":
           "assets/images/produk2.png",
-    }
+    },
+    {
+      "title": "vivastudio.",
+      "price": "\$55",
+      "images":
+          "assets/images/produk3.png",
+    },
   ];
 
   @override
