@@ -4,7 +4,7 @@ import 'package:bajulo/layout gridview/layoutgrid%20men%20top.dart';
 import 'package:bajulo/layout%20gridview/layoutgridAll.dart';
 import 'package:bajulo/login%20fix.dart';
 import 'package:bajulo/navbar.dart';
-import 'package:bajulo/navbar1.dart';
+import 'package:bajulo/widget028Bottom.dart';
 import 'package:bajulo/notif.dart';
 import 'package:bajulo/search.dart';
 import 'package:flutter/material.dart';
