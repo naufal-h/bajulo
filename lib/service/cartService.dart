@@ -1,4 +1,4 @@
-import 'package:bajulo/model/cartModel';
+import 'package:bajulo/model/cartModel.dart';
 
 class CartService {
   static List<Cart> cartData =

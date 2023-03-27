@@ -1,3 +1,4 @@
+import 'package:bajulo/login%20fix.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/widget028Bottom.dart';
@@ -277,7 +278,7 @@ class registerPage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Widget028()));
+                  .push(MaterialPageRoute(builder: (context) => loginfix()));
             },
             child: Text(
               'Sign Up',

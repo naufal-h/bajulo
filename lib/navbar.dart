@@ -9,6 +9,7 @@ import 'package:bajulo/layout%20gridview/categoryWomanBottom.dart';
 import 'package:bajulo/layout%20gridview/categoryWomanTop.dart';
 import 'package:bajulo/order_hist.dart';
 import 'package:bajulo/product_details.dart';
+import 'package:bajulo/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/notif.dart';
 import 'order_hist.dart';
@@ -114,6 +115,18 @@ class NavBar extends StatelessWidget {
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const order_hist()));
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(
+              Icons.favorite,
+              color: Theme.of(context).colorScheme.tertiary,
+            ),
+            title: Text("Wishlist"),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const wishlist()));
             },
           ),
           Divider(),

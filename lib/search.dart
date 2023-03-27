@@ -1,3 +1,4 @@
+import 'package:bajulo/searchResult.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/product_details.dart';
@@ -40,26 +41,35 @@ class search extends StatelessWidget {
       appBar: AppBar(
         title: Container(
           height: 40,
-          child: TextField(
-            style: TextStyle(fontSize: 14, color: Colors.white),
-            decoration: InputDecoration(
-              fillColor: Colors.white.withOpacity(0.1),
-              filled: true,
-              hintStyle:
-                  TextStyle(fontSize: 14, color: Colors.white.withOpacity(0.3)),
-              hintText: 'Search...',
-              prefixIcon:
-                  Icon(Icons.search, color: Colors.white.withOpacity(0.3)),
-              contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.transparent, width: 1),
-                borderRadius: BorderRadius.circular(16),
+          child: Form(
+            child: TextFormField(
+              style: TextStyle(fontSize: 14, color: Colors.white),
+              decoration: InputDecoration(
+                fillColor: Colors.white.withOpacity(0.1),
+                filled: true,
+                hintStyle: TextStyle(
+                    fontSize: 14, color: Colors.white.withOpacity(0.3)),
+                hintText: 'Search...',
+                prefixIcon:
+                    Icon(Icons.search, color: Colors.white.withOpacity(0.3)),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent, width: 1),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Theme.of(context).primaryColor, width: 1),
+                  borderRadius: BorderRadius.circular(16),
+                ),
               ),
-              focusedBorder: OutlineInputBorder(
-                borderSide:
-                    BorderSide(color: Theme.of(context).primaryColor, width: 1),
-                borderRadius: BorderRadius.circular(16),
-              ),
+              onFieldSubmitted: (value) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => searchResult()),
+                );
+              },
             ),
           ),
         ),

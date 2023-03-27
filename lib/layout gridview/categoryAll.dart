@@ -11,14 +11,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class categorydetails extends StatefulWidget {
-  const categorydetails({super.key});
+class categoryAll extends StatefulWidget {
+  const categoryAll({super.key});
 
   @override
-  State<categorydetails> createState() => _categorydetailsState();
+  State<categoryAll> createState() => _categoryAllState();
 }
 
-class _categorydetailsState extends State<categorydetails> {
+class _categoryAllState extends State<categoryAll> {
   @override
   Widget build(BuildContext context) {
     //   int _currentIndex = 0;
