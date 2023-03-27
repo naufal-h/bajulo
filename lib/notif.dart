@@ -17,7 +17,7 @@ class _notifState extends State<notif> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavBar(),
+      
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text("Notifications", style: TextStyle(fontFamily: "Poppins")),

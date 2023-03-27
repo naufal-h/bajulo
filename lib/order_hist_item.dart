@@ -16,7 +16,7 @@ class order_hist_item extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-                color: Colors.grey, borderRadius: BorderRadius.circular(10)),
+                color: Colors.grey.shade700, borderRadius: BorderRadius.circular(10)),
             child: Row(
               children: [
                 Container(

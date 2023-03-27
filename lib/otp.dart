@@ -1,3 +1,4 @@
+import 'package:bajulo/login%20fix.dart';
 import 'package:flutter/material.dart';
 import 'widget028Bottom.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -76,7 +77,7 @@ class _otpState extends State<otp> {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Widget028()));
+                    .push(MaterialPageRoute(builder: (context) => loginfix()));
               },
               child: Text(
                 'Verify',
