@@ -2,6 +2,7 @@ import 'package:bajulo/homeScreen.dart';
 import 'package:bajulo/login%20fix.dart';
 import 'package:bajulo/search.dart';
 import 'package:bajulo/notif.dart';
+import 'package:bajulo/user.dart';
 import 'package:flutter/material.dart';
 
 class Widget028 extends StatefulWidget {
@@ -12,7 +13,7 @@ class Widget028 extends StatefulWidget {
 
 class _Widget028State extends State<Widget028> {
   int _currentIndex = 0;
-  final List<Widget> _pages = [homeScreen(), search(), notif(), loginfix()];
+  final List<Widget> _pages = [homeScreen(), search(), notif(), userPage()];
   List<Widget> body = const [
     Icon(Icons.home),
     Icon(Icons.search),

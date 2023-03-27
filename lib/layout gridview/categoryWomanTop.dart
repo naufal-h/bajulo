@@ -8,6 +8,7 @@ import 'package:bajulo/login%20fix.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/widget028Bottom.dart';
 import 'package:bajulo/notif.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:bajulo/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -23,25 +24,27 @@ class categoryWomanTop extends StatefulWidget {
 class _categoryWomanTopState extends State<categoryWomanTop> {
   @override
   Widget build(BuildContext context) {
-  //   int _currentIndex = 0;
-  // final List<Widget> _pages = [homeScreen(), search(), notif(), loginfix()];
-  // List<Widget> body = const [
-  //   Icon(Icons.home),
-  //   Icon(Icons.search),
-  //   Icon(Icons.notifications),
-  //   Icon(Icons.person)
-  // ];
+    //   int _currentIndex = 0;
+    // final List<Widget> _pages = [homeScreen(), search(), notif(), loginfix()];
+    // List<Widget> body = const [
+    //   Icon(Icons.home),
+    //   Icon(Icons.search),
+    //   Icon(Icons.notifications),
+    //   Icon(Icons.person)
+    // ];
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-       appBar: AppBar(
+      appBar: AppBar(
         title: Text("Woman Top", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 20),
-            icon: Icon(Icons.card_travel),
-            onPressed: ()=> {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const cart()))
+            icon:
+                SvgPicture.asset('assets/icons/cart.svg', color: Colors.white),
+            onPressed: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const cart()))
             },
           ),
         ],

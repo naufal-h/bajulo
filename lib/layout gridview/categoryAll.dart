@@ -1,4 +1,5 @@
 import 'package:bajulo/cart.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:bajulo/homeScreen.dart';
 import 'package:bajulo/layout%20gridview/layoutgridAll.dart';
 import 'package:bajulo/login%20fix.dart';
@@ -20,25 +21,27 @@ class categorydetails extends StatefulWidget {
 class _categorydetailsState extends State<categorydetails> {
   @override
   Widget build(BuildContext context) {
-  //   int _currentIndex = 0;
-  // final List<Widget> _pages = [homeScreen(), search(), notif(), loginfix()];
-  // List<Widget> body = const [
-  //   Icon(Icons.home),
-  //   Icon(Icons.search),
-  //   Icon(Icons.notifications),
-  //   Icon(Icons.person)
-  // ];
+    //   int _currentIndex = 0;
+    // final List<Widget> _pages = [homeScreen(), search(), notif(), loginfix()];
+    // List<Widget> body = const [
+    //   Icon(Icons.home),
+    //   Icon(Icons.search),
+    //   Icon(Icons.notifications),
+    //   Icon(Icons.person)
+    // ];
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-       appBar: AppBar(
+      appBar: AppBar(
         title: Text("All", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 20),
-            icon: Icon(Icons.card_travel),
-            onPressed: ()=> {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const cart()))
+            icon:
+                SvgPicture.asset('assets/icons/cart.svg', color: Colors.white),
+            onPressed: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const cart()))
             },
           ),
         ],

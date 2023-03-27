@@ -1,6 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
-import 'package:bajulo/main.dart';
+import 'package:bajulo/widget028Bottom.dart';
 
 class registerPage extends StatelessWidget {
   const registerPage({super.key});
@@ -71,7 +71,7 @@ class registerPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(bottom: 32),
             child: Text(
-              'Silahkan masukkan data diri anda untuk mendaftar',
+              'Sign up for an account and enjoy faster checkout, order tracking, and exclusive deals.',
               style: TextStyle(
                   color: Colors.white.withOpacity(0.7),
                   fontSize: 12,
@@ -277,7 +277,7 @@ class registerPage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => myApp()));
+                  .push(MaterialPageRoute(builder: (context) => Widget028()));
             },
             child: Text(
               'Sign Up',

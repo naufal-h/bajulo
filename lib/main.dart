@@ -1,7 +1,5 @@
-
-import 'package:bajulo/homeScreen.dart';
+import 'package:bajulo/login fix.dart';
 import 'package:flutter/material.dart';
-import 'widget028Bottom.dart';
 import 'package:bajulo/const/tema.dart';
 
 void main() => runApp(myApp());
@@ -13,12 +11,11 @@ class myApp extends StatelessWidget {
       theme: Tema().themedata,
       title: "bajulo",
       // initialRoute: homeScreen.x,
-      home: Widget028(),
+      home: loginfix(),
       // routes: {
       //   homeScreen.x:(context) => homeScreen(),
       // },
       debugShowCheckedModeBanner: false,
-      
     );
   }
 }

@@ -1,4 +1,6 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:bajulo/main.dart';
+import 'package:bajulo/cart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:bajulo/navbar.dart';
@@ -23,9 +25,11 @@ class _notifState extends State<notif> {
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 20),
-            icon: Icon(Icons.card_travel),
-            onPressed: () {
-              // pindah ke cart
+            icon:
+                SvgPicture.asset('assets/icons/cart.svg', color: Colors.white),
+            onPressed: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const cart()))
             },
           ),
         ],

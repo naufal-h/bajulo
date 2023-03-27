@@ -1,4 +1,5 @@
 import 'package:bajulo/cart.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:bajulo/layout%20gridview/layoutgridAll.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/product_card.dart';
@@ -6,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:bajulo/category.dart';
 import 'package:bajulo/product_card.dart';
-
 
 class home_body extends StatefulWidget {
   const home_body({super.key});
@@ -27,9 +27,11 @@ class _home_bodyState extends State<home_body> {
         actions: [
           IconButton(
             padding: EdgeInsets.only(right: 20),
-            icon: Icon(Icons.card_travel),
-            onPressed: ()=> {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const cart()))
+            icon:
+                SvgPicture.asset('assets/icons/cart.svg', color: Colors.white),
+            onPressed: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const cart()))
             },
           ),
         ],
@@ -50,7 +52,7 @@ class _home_bodyState extends State<home_body> {
           ),
           CarouselSlider(
             options: CarouselOptions(height: 200.0),
-            items: [3,5].map((i) {
+            items: [3, 5].map((i) {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(

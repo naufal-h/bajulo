@@ -1,12 +1,11 @@
-import 'package:bajulo/forgotPassword.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/register.dart';
 import 'package:bajulo/main.dart';
 import 'package:bajulo/widget028Bottom.dart';
 
-class loginfix extends StatelessWidget {
-  const loginfix({super.key});
+class forgotPassword extends StatelessWidget {
+  const forgotPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +62,7 @@ class loginfix extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(top: 20, bottom: 12),
             child: Text(
-              'Welcome back to BajuLo!',
+              'Forgot Your Password?',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
@@ -75,7 +74,7 @@ class loginfix extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(bottom: 32),
             child: Text(
-              'Log in to your account and keep the good times rolling.',
+              'Don\'t worry, it happens to the best of us. Let\'s get you back on track.',
               style: TextStyle(
                   color: Colors.white.withOpacity(0.7),
                   fontSize: 12,
@@ -118,74 +117,13 @@ class loginfix extends StatelessWidget {
             ),
           ),
           SizedBox(height: 16),
-          Container(
-            margin: EdgeInsets.only(bottom: 12),
-            child: Text(
-              'Password',
-              style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'poppins',
-                fontSize: 16,
-              ),
-            ),
-          ),
-          TextField(
-            autofocus: false,
-            obscureText: true,
-            decoration: InputDecoration(
-              hintText: 'Password',
-              prefixIcon: Container(
-                padding: EdgeInsets.all(12),
-                child: SvgPicture.asset('assets/icons/lock.svg',
-                    color: Colors.black),
-              ),
-              contentPadding:
-                  EdgeInsets.symmetric(vertical: 10, horizontal: 14),
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.black, width: 1),
-                borderRadius: BorderRadius.circular(25),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderSide:
-                    BorderSide(color: Theme.of(context).primaryColor, width: 1),
-                borderRadius: BorderRadius.circular(25),
-              ),
-              fillColor: Colors.white,
-              filled: true,
-              suffixIcon: IconButton(
-                onPressed: () {},
-                icon: SvgPicture.asset('assets/icons/eye.svg',
-                    color: Colors.black),
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            child: TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => forgotPassword()));
-              },
-              child: Text(
-                'Forgot Password ?',
-                style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.white.withOpacity(0.5),
-                    fontWeight: FontWeight.w700),
-              ),
-              style: TextButton.styleFrom(
-                foregroundColor:
-                    Theme.of(context).primaryColor.withOpacity(0.1),
-              ),
-            ),
-          ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => Widget028()));
             },
             child: Text(
-              'Sign In',
+              'Continue',
               style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w600,

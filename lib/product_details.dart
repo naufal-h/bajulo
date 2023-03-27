@@ -1,5 +1,5 @@
+import 'package:bajulo/cart.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
 import 'package:bajulo/product_img.dart';
 
 class productDetails extends StatefulWidget {
@@ -43,7 +43,8 @@ class _productDetailsState extends State<productDetails> {
             padding: EdgeInsets.only(right: 20),
             icon: Icon(Icons.favorite),
             onPressed: () {
-              // pindah ke cart
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const cart()));
             },
           ),
         ],
