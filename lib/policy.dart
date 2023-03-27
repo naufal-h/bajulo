@@ -15,7 +15,6 @@ class _policyPageState extends State<policy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavBar(),
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text("Returns Policy", style: TextStyle(fontFamily: "Poppins")),
@@ -32,19 +31,22 @@ class _policyPageState extends State<policy> {
           ),
         ],
       ),
-      body: Center(
-        child: Column(children: [
-          Text(
-            "\nYou can get in touch with us by visiting our FAQ page by clicking here, you will need to locate and click on the question that match your query before being able to see our contact form or our chat support service. We will respond within the next working day – Monday to Sunday: 9:00 – 18:00. Please be aware that all our e-mails are conducted in English.\n\nNothing in this returns policy affects your statutory rights. Your rights under this returns policy are in addition to your cancellation rights under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013.",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                height: 1.5,
-                wordSpacing: 1.1,
-                decoration: TextDecoration.none),
-            textAlign: TextAlign.left,
-          ),
-        ]),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 15,right: 15),
+        child: Center(
+          child: Column(children: [
+            Text(
+              "\nYou can get in touch with us by visiting our FAQ page by clicking here, you will need to locate and click on the question that match your query before being able to see our contact form or our chat support service. We will respond within the next working day – Monday to Sunday: 9:00 – 18:00. Please be aware that all our e-mails are conducted in English.\n\nNothing in this returns policy affects your statutory rights. Your rights under this returns policy are in addition to your cancellation rights under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013.",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  height: 1.5,
+                  wordSpacing: 1.1,
+                  decoration: TextDecoration.none),
+              textAlign: TextAlign.left,
+            ),
+          ]),
+        ),
       ),
     );
   }

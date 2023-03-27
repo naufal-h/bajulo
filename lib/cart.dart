@@ -1,4 +1,5 @@
 import 'package:bajulo/model/cartModel.dart';
+import 'package:bajulo/payment.dart';
 import 'package:bajulo/service/cartService.dart';
 
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class _cartState extends State<cart> {
         child: ElevatedButton(
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => orderConfirm()));
+                MaterialPageRoute(builder: (context) => paymentMethod()));
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +55,7 @@ class _cartState extends State<cart> {
               Flexible(
                 flex: 6,
                 child: Text(
-                  'Rp. 10,429,000',
+                  'Rp. 1.234,000',
                   style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,

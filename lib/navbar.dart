@@ -142,13 +142,13 @@ class NavBar extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(
-              Icons.favorite,
+              Icons.notifications,
               color: Theme.of(context).colorScheme.tertiary,
             ),
-            title: Text("Wishlist"),
+            title: Text("Notification"),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const wishlist()));
+                  MaterialPageRoute(builder: (context) => const notif()));
             },
           ),
           Divider(),
