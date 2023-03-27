@@ -1,4 +1,4 @@
-import 'package:bajulo/model/cartModel';
+import 'package:bajulo/model/cartModel.dart';
 import 'package:bajulo/service/cartService.dart';
 
 import 'package:flutter/material.dart';

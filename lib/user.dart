@@ -43,7 +43,6 @@ class _userPageState extends State<userPage> {
               ),
               child: Column(
                 children: [
-                  // Profile Picture
                   Container(
                     width: 96,
                     height: 96,
@@ -56,7 +55,6 @@ class _userPageState extends State<userPage> {
                       ),
                     ),
                   ),
-                  // Fullname
                   Container(
                     margin: EdgeInsets.only(bottom: 4, top: 14),
                     child: Text(
@@ -67,7 +65,6 @@ class _userPageState extends State<userPage> {
                           fontSize: 16),
                     ),
                   ),
-                  // Username
                   Text(
                     '@UzuiTengen',
                     style: TextStyle(

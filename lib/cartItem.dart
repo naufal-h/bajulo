@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bajulo/model/cartModel';
+import 'package:bajulo/model/cartModel.dart';
 import 'package:intl/intl.dart';
 
 class CartTile extends StatefulWidget {

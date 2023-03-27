@@ -34,7 +34,6 @@ class userTile extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // Icon Box
             Container(
               width: 46,
               height: 46,
@@ -46,7 +45,6 @@ class userTile extends StatelessWidget {
               ),
               child: icon,
             ),
-            // Info
             Expanded(
               child: (subtitle == null)
                   ? Text('$title',
