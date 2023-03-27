@@ -51,7 +51,7 @@ class _categoryState extends State<category> {
           ),
           categoryProduct(
             press: ()=>{
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categorydetails()))
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const categoryAll()))
             },
             text: "All",
           ),
