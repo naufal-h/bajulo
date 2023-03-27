@@ -1,3 +1,4 @@
+import 'package:bajulo/homeScreen.dart';
 import 'package:bajulo/layout gridview/categoryMenBottom.dart';
 import 'package:bajulo/layout gridview/categoryMenTop.dart';
 import 'package:bajulo/layout%20gridview/categoryAll.dart';
@@ -29,7 +30,7 @@ class NavBar extends StatelessWidget {
             color: Theme.of(context).colorScheme.tertiary,
             alignment: Alignment.bottomCenter,
             child: Text(
-              "MENU",
+              "Menu",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22,
@@ -39,69 +40,90 @@ class NavBar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
-              Icons.new_releases,
+              Icons.home,
               color: Theme.of(context).colorScheme.tertiary,
             ),
-            title: Text('New Arrival'),
+            title: Text('Home'),
             onTap: () => {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const categoryNewArrival()))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => homeScreen()))
             },
           ),
           Divider(),
           ExpansionTile(
-            title: Text('Men'),
+            title: Text('Shop'),
             leading: Icon(
-              Icons.man,
+              Icons.shop_2_sharp,
               color: Theme.of(context).colorScheme.tertiary,
             ),
             children: [
               ListTile(
-                title: Text("Tops"),
+                leading: Icon(
+                  Icons.new_releases,
+                  color: Theme.of(context).colorScheme.tertiary,
+                ),
+                title: Text('New Arrival'),
                 onTap: () => {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const categoryMenTop()))
+                          builder: (context) => const categoryNewArrival()))
                 },
               ),
-              ListTile(
-                title: Text("Bottoms"),
-                onTap: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const categoryMenBottom()))
-                },
+              ExpansionTile(
+                title: Text('Men'),
+                leading: Icon(
+                  Icons.man,
+                  color: Theme.of(context).colorScheme.tertiary,
+                ),
+                children: [
+                  ListTile(
+                    title: Text("Tops"),
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const categoryMenTop()))
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Bottoms"),
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const categoryMenBottom()))
+                    },
+                  ),
+                ],
               ),
-            ],
-          ),
-          ExpansionTile(
-            title: Text('Women'),
-            leading: Icon(
-              Icons.man,
-              color: Color(0xFF404040),
-            ),
-            children: [
-              ListTile(
-                title: Text("Tops"),
-                onTap: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const categoryWomanTop()))
-                },
-              ),
-              ListTile(
-                title: Text("Bottoms"),
-                onTap: () => {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const categoryWomanBottom()))
-                },
+              ExpansionTile(
+                title: Text('Women'),
+                leading: Icon(
+                  Icons.man,
+                  color: Color(0xFF404040),
+                ),
+                children: [
+                  ListTile(
+                    title: Text("Tops"),
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const categoryWomanTop()))
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Bottoms"),
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const categoryWomanBottom()))
+                    },
+                  ),
+                ],
               ),
             ],
           ),
