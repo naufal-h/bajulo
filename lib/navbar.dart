@@ -12,6 +12,7 @@ import 'package:bajulo/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/notif.dart';
 import 'order_hist.dart';
+import 'policy.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -109,7 +110,7 @@ class NavBar extends StatelessWidget {
               Icons.note,
               color: Theme.of(context).colorScheme.tertiary,
             ),
-            title: Text("Order History"),
+            title: Text("Orders"),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const order_hist()));
@@ -130,8 +131,11 @@ class NavBar extends StatelessWidget {
               Icons.description,
               color: Theme.of(context).colorScheme.tertiary,
             ),
-            title: Text('Policies'),
-            onTap: () => null,
+            title: Text('Returns Policy'),
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => policy()));
+            },
           ),
         ],
       ),
