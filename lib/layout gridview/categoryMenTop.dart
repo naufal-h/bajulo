@@ -33,7 +33,7 @@ class _categoryMenTopState extends State<categoryMenTop> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text("Men Top", style: TextStyle(fontFamily: "Poppins")),
+        title: Text("Men Tops", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
         actions: [
           IconButton(
