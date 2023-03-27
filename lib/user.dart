@@ -1,5 +1,6 @@
 import 'package:bajulo/cart.dart';
 import 'package:bajulo/navbar.dart';
+import 'package:bajulo/order_hist.dart';
 import 'package:bajulo/wishlist.dart';
 import 'package:bajulo/wishlistUser.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -100,8 +101,7 @@ class _userPageState extends State<userPage> {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => wishlistUser()),
+                        MaterialPageRoute(builder: (context) => wishlistUser()),
                       );
                     },
                     child: userTile(
@@ -125,15 +125,23 @@ class _userPageState extends State<userPage> {
                     title: 'Last Seen',
                     subtitle: 'Easily pick up where you left off.',
                   ),
-                  userTile(
-                    margin: EdgeInsets.only(top: 0),
-                    onTap: () {},
-                    icon: Icon(
-                      Icons.description,
-                      color: Colors.white,
+                  GestureDetector(
+                    onTap:() {
+                       Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => order_hist()),
+                      );
+                    },
+                    child: userTile(
+                      margin: EdgeInsets.only(top: 0),
+                      onTap: () {},
+                      icon: Icon(
+                        Icons.description,
+                        color: Colors.white,
+                      ),
+                      title: 'Orders',
+                      subtitle: 'Stay on top of your purchases.',
                     ),
-                    title: 'Orders',
-                    subtitle: 'Stay on top of your purchases.',
                   ),
                   userTile(
                     margin: EdgeInsets.only(top: 0),
