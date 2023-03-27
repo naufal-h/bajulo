@@ -3,14 +3,14 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class gridLayout extends StatefulWidget {
-  const gridLayout({super.key});
+class gridLayoutTrending extends StatefulWidget {
+  const gridLayoutTrending({super.key});
 
   @override
-  State<gridLayout> createState() => _gridLayoutState();
+  State<gridLayoutTrending> createState() => _gridLayoutTrendingState();
 }
 
-class _gridLayoutState extends State<gridLayout> {
+class _gridLayoutTrendingState extends State<gridLayoutTrending> {
   final List<Map<String, dynamic>> gridMap = [
     {
       "title": "Wide Cotton Pants",
@@ -77,7 +77,7 @@ class _gridLayoutState extends State<gridLayout> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15,top: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15,),
       child: GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,

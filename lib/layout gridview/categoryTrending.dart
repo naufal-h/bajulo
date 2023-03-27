@@ -1,4 +1,5 @@
 import 'package:bajulo/cart.dart';
+import 'package:bajulo/layout%20gridview/layoutgridTrending.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:bajulo/homeScreen.dart';
 import 'package:bajulo/layout%20gridview/layoutgridAll.dart';
@@ -11,14 +12,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class categoryAll extends StatefulWidget {
-  const categoryAll({super.key});
+class categorydetails extends StatefulWidget {
+  const categorydetails({super.key});
 
   @override
-  State<categoryAll> createState() => _categoryAllState();
+  State<categorydetails> createState() => _categorydetailsState();
 }
 
-class _categoryAllState extends State<categoryAll> {
+class _categorydetailsState extends State<categorydetails> {
   @override
   Widget build(BuildContext context) {
     //   int _currentIndex = 0;
@@ -49,7 +50,7 @@ class _categoryAllState extends State<categoryAll> {
       body: ListView(
         children: [
           Container(
-            child: gridLayout(),
+            child: gridLayoutTrending(),
           )
         ],
       ),
