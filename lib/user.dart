@@ -1,5 +1,7 @@
 import 'package:bajulo/cart.dart';
 import 'package:bajulo/navbar.dart';
+import 'package:bajulo/wishlist.dart';
+import 'package:bajulo/wishlistUser.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/widget028Bottom.dart';
@@ -94,15 +96,24 @@ class _userPageState extends State<userPage> {
                           fontWeight: FontWeight.w600),
                     ),
                   ),
-                  userTile(
-                    onTap: () {},
-                    margin: EdgeInsets.only(top: 10),
-                    icon: Icon(
-                      Icons.favorite,
-                      color: Colors.white,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => wishlistUser()),
+                      );
+                    },
+                    child: userTile(
+                      onTap: () {},
+                      margin: EdgeInsets.only(top: 10),
+                      icon: Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                      ),
+                      title: 'Wishlist',
+                      subtitle: 'Track Favorites, Get Notified.',
                     ),
-                    title: 'Wishlist',
-                    subtitle: 'Track Favorites, Get Notified.',
                   ),
                   userTile(
                     margin: EdgeInsets.only(top: 0),

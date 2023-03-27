@@ -40,7 +40,7 @@ class _home_bodyState extends State<home_body> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 10, top: 20, bottom: 10),
+            margin: EdgeInsets.only(left: 10, top: 15, bottom: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
