@@ -24,13 +24,21 @@ class _wishlistState extends State<wishlist> {
       appBar: AppBar(
         title: Text("Wishlist", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
+        actions: [
+          IconButton(
+            padding: EdgeInsets.only(right: 20),
+            icon:
+                SvgPicture.asset('assets/icons/cart.svg', color: Colors.white),
+            onPressed: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const cart()))
+            },
+          ),
+        ],
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 25),
-            child: Container(child: gridLayout()),
-          ),
+          Container(child: gridLayout()),
         ],
       ),
     );
