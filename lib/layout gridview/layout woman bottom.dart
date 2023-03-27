@@ -13,29 +13,17 @@ class gridLayoutWomanBottom extends StatefulWidget {
 class _gridLayoutWomanBottomState extends State<gridLayoutWomanBottom> {
   final List<Map<String, dynamic>> gridMap = [
     {
-      "title": "white sneaker with adidas logo",
-      "price": "\$255",
+      "title": "Wide Cotton Pants",
+      "price": "Rp. 730.000",
       "images":
-          "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202302/85693e04a8cd5570458085e75d1ee380.jpg",
     },
-   
-  
-    {
-      "title": "Gamma shoes with beta brand.",
-      "price": "\$275",
-      "images":
-          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
-   
-   
-   
-    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15,right: 15,top: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -59,11 +47,24 @@ class _gridLayoutWomanBottomState extends State<gridLayoutWomanBottom> {
               children: [
                 ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(16)),
-                  child: Image.network(
-                    "${gridMap.elementAt(index)['images']}",
-                    height: 170,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
+                  child: Stack(
+                    children: [
+                      Image.network(
+                        "${gridMap.elementAt(index)['images']}",
+                        height: 170,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 10,
+                        child: Image.asset(
+                          "assets/icons/heart.png",
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -73,33 +74,19 @@ class _gridLayoutWomanBottomState extends State<gridLayoutWomanBottom> {
                     children: [
                       Text("${gridMap.elementAt(index)['title']}",
                           style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white,))),
+                              textStyle: TextStyle(
+                            color: Colors.white,
+                          ))),
                       const SizedBox(
                         height: 8.0,
                       ),
-                      Text(
-                        "${gridMap.elementAt(index)['price']}",
-                        style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
-                      ),
+                      Text("${gridMap.elementAt(index)['price']}",
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))),
                       const SizedBox(
                         height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.card_travel
-                            ),
-                          ),
-                        ],
                       ),
                     ],
                   ),

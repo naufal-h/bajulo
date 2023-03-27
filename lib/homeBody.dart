@@ -39,7 +39,7 @@ class _home_bodyState extends State<home_body> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 10, top: 20),
+            margin: EdgeInsets.only(left: 10, top: 20, bottom: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -51,16 +51,18 @@ class _home_bodyState extends State<home_body> {
             ),
           ),
           CarouselSlider(
-            options: CarouselOptions(height: 200.0),
-            items: [3, 5].map((i) {
+            options: CarouselOptions(height: 152.0),
+            items: [6, 7, 8].map((i) {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
                     width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
-                            image: AssetImage("assets/images/asset $i.png"))),
+                            image: AssetImage("assets/images/asset $i.jpg"),
+                            fit: BoxFit.fitWidth)),
                   );
                 },
               );

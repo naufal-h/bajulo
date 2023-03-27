@@ -13,34 +13,41 @@ class gridLayoutWoman extends StatefulWidget {
 class _gridLayoutWomanState extends State<gridLayoutWoman> {
   final List<Map<String, dynamic>> gridMap = [
     {
-      "title": "white sneaker with adidas logo",
-      "price": "\$255",
+      "title": "Wide Cotton Pants",
+      "price": "Rp. 730.000",
       "images":
-          "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202302/85693e04a8cd5570458085e75d1ee380.jpg",
     },
-   
-  
     {
-      "title": "Gamma shoes with beta brand.",
-      "price": "\$275",
+      "title": "Balloon Bolero Set Up",
+      "price": "Rp. 756.000",
       "images":
-          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202302/f8ce576c8e907faaeaab0948ea2fbc87.jpg",
     },
-   
-   
-   
     {
-      "title": "V&V  model white t shirts.",
-      "price": "\$55",
+      "title": "Side Button Wide Navy Vest ",
+      "price": "Rp. 690.000",
       "images":
-          "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    }
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202208/b0777c58ac41ebb8fd877938c30bb30d.jpg",
+    },
+    {
+      "title": "Wave Stitch Sweat Shirt",
+      "price": "Rp. 702.000",
+      "images":
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202302/fa12124dedaedc47a791d863d630fcbb.jpg",
+    },
+    {
+      "title": "Wide Black Denim Jacket",
+      "price": "Rp. 1.280.000",
+      "images":
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202208/3e61105d8bad665dadca1faea51f1130.jpg",
+    },
   ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15,right: 15,top: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -64,11 +71,24 @@ class _gridLayoutWomanState extends State<gridLayoutWoman> {
               children: [
                 ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(16)),
-                  child: Image.network(
-                    "${gridMap.elementAt(index)['images']}",
-                    height: 170,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
+                  child: Stack(
+                    children: [
+                      Image.network(
+                        "${gridMap.elementAt(index)['images']}",
+                        height: 170,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 10,
+                        child: Image.asset(
+                          "assets/icons/heart.png",
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -78,33 +98,19 @@ class _gridLayoutWomanState extends State<gridLayoutWoman> {
                     children: [
                       Text("${gridMap.elementAt(index)['title']}",
                           style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white,))),
+                              textStyle: TextStyle(
+                            color: Colors.white,
+                          ))),
                       const SizedBox(
                         height: 8.0,
                       ),
-                      Text(
-                        "${gridMap.elementAt(index)['price']}",
-                        style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
-                      ),
+                      Text("${gridMap.elementAt(index)['price']}",
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))),
                       const SizedBox(
                         height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.card_travel
-                            ),
-                          ),
-                        ],
                       ),
                     ],
                   ),

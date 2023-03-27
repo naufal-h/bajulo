@@ -13,59 +13,35 @@ class gridLayoutMen extends StatefulWidget {
 class _gridLayoutMenState extends State<gridLayoutMen> {
   final List<Map<String, dynamic>> gridMap = [
     {
-      "title": "white sneaker with adidas logo",
-      "price": "\$255",
+      "title": "Woozy Lettering Long Sleeve",
+      "price": "Rp. 504.000",
       "images":
-          "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202301/cdc5742f1819c5c5b83d48ba3f9d5d90.jpg",
     },
     {
-      "title": "Black Jeans with blue stripes",
-      "price": "\$245",
+      "title": "Checker Board Knit Top",
+      "price": "Rp. 648.000",
       "images":
-          "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202302/a6bf0f76ff890ec06b114c52383b7ba3.jpg",
     },
     {
-      "title": "Red shoes with black stripes",
-      "price": "\$155",
+      "title": "Cozy Flower Knit Cardigan",
+      "price": "Rp. 1.026.000",
       "images":
-          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202301/a81d859163f323f70b88a33c9c82466b.jpg",
     },
     {
-      "title": "Gamma shoes with beta brand.",
-      "price": "\$275",
+      "title": "Balloon Cotton Pants",
+      "price": "Rp. 828.000",
       "images":
-          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
-    {
-      "title": "Alpha t-shirt for alpha testers.",
-      "price": "\$25",
-      "images":
-          "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
-    {
-      "title": "Beta jeans for beta testers",
-      "price": "\$27",
-      "images":
-          "https://images.unsplash.com/photo-1602293589930-45aad59ba3ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    },
-    {
-      "title": "grooverhyme",
-      "price": "\$55",
-      "images":
-          "assets/images/produk2.png",
-    },
-    {
-      "title": "vivastudio.",
-      "price": "\$55",
-      "images":
-          "assets/images/produk3.png",
+          "https://cafe24img.poxo.com/romanticc/web/product/medium/202301/c797d46908d7106692b2324858e56bcb.jpg",
     },
   ];
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15,right: 15,top: 15),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: GridView.builder(
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -89,11 +65,24 @@ class _gridLayoutMenState extends State<gridLayoutMen> {
               children: [
                 ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(16)),
-                  child: Image.network(
-                    "${gridMap.elementAt(index)['images']}",
-                    height: 170,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
+                  child: Stack(
+                    children: [
+                      Image.network(
+                        "${gridMap.elementAt(index)['images']}",
+                        height: 170,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 10,
+                        child: Image.asset(
+                          "assets/icons/heart.png",
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -103,33 +92,19 @@ class _gridLayoutMenState extends State<gridLayoutMen> {
                     children: [
                       Text("${gridMap.elementAt(index)['title']}",
                           style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white,))),
+                              textStyle: TextStyle(
+                            color: Colors.white,
+                          ))),
                       const SizedBox(
                         height: 8.0,
                       ),
-                      Text(
-                        "${gridMap.elementAt(index)['price']}",
-                        style: GoogleFonts.poppins(
-                              textStyle: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))
-                      ),
+                      Text("${gridMap.elementAt(index)['price']}",
+                          style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold))),
                       const SizedBox(
                         height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.card_travel
-                            ),
-                          ),
-                        ],
                       ),
                     ],
                   ),
