@@ -1,67 +1,148 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:bajulo/model/cartModel';
+import 'package:intl/intl.dart';
 
-class cartItem extends StatelessWidget {
-  const cartItem({super.key});
+class CartTile extends StatefulWidget {
+  final Cart data;
+  CartTile({required this.data});
 
   @override
+  State<CartTile> createState() => _CartTileState();
+}
+
+class _CartTileState extends State<CartTile> {
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        // Text("My cart"),
-        for (int i = 0; i < 2; i++)
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 80,
+      padding: EdgeInsets.only(top: 5, left: 5, bottom: 5, right: 12),
+      decoration: BoxDecoration(
+        color: Colors.grey,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.grey, width: 1),
+      ),
+      child: Row(
+        children: [
           Container(
-            height: 100,
-            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            padding: EdgeInsets.all(10),
+            width: 70,
+            height: 70,
+            margin: EdgeInsets.only(right: 20),
             decoration: BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.circular(10)),
-            child: Row(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(16),
+              image: DecorationImage(
+                  image: AssetImage(widget.data.image[0]), fit: BoxFit.cover),
+            ),
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: 70,
-                  width: 70,
-                  margin: EdgeInsets.only(right: 15),
-                  child: Image.asset("assets/images/details_a1.png"),
+                Text(
+                  '${widget.data.name}',
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'poppins',
+                      color: Colors.black),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                Container(
+                  margin: EdgeInsets.only(top: 4),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Product title",
-                        style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Expanded(
+                        child: Text(
+                          'Rp. ${NumberFormat('#,###').format(widget.data.price)}',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'poppins',
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
                       ),
-                      Text(
-                        "XL",
-                        style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 15,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Rp 10.000",
-                        style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+                      Container(
+                        margin: EdgeInsets.only(top: 4),
+                        height: 26,
+                        width: 90,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.white,
+                        ),
+                        child: Row(
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  if (widget.data.count > 1) {
+                                    widget.data.count--;
+                                    widget.data.price -= widget.data.itemCost;
+                                  }
+                                });
+                              },
+                              child: Container(
+                                width: 26,
+                                height: 26,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  '-',
+                                  style: TextStyle(
+                                      fontFamily: 'poppins',
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              child: FittedBox(
+                                fit: BoxFit.fitWidth,
+                                child: Text(
+                                  '${widget.data.count}',
+                                  style: TextStyle(
+                                      fontFamily: 'poppins',
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  widget.data.count++;
+                                  widget.data.price += widget.data.itemCost;
+                                });
+                              },
+                              child: Container(
+                                width: 26,
+                                height: 26,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Colors.white,
+                                ),
+                                child: Text(
+                                  '+',
+                                  style: TextStyle(
+                                      fontFamily: 'poppins',
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           )
-      ],
+        ],
+      ),
     );
   }
 }
