@@ -2,7 +2,7 @@ import 'package:bajulo/model/cartModel';
 import 'package:bajulo/service/cartService.dart';
 
 import 'package:flutter/material.dart';
-import 'widget028Bottom.dart';
+import 'orderConfirm.dart';
 import 'cartItem.dart';
 
 class cart extends StatefulWidget {
@@ -29,8 +29,8 @@ class _cartState extends State<cart> {
             border: Border(top: BorderSide(color: Colors.grey, width: 1))),
         child: ElevatedButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Widget028()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => orderConfirm()));
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -233,7 +233,7 @@ class _cartState extends State<cart> {
                             Expanded(
                               flex: 4,
                               child: Text(
-                                '3-5 Days',
+                                '1-2 Days',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Colors.white.withOpacity(0.7)),
@@ -276,7 +276,7 @@ class _cartState extends State<cart> {
                             Expanded(
                               flex: 4,
                               child: Text(
-                                'Rp, 1.429,000',
+                                'Rp, 1.234,000',
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
