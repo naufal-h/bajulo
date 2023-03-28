@@ -1,4 +1,5 @@
 import 'package:bajulo/cart.dart';
+import 'package:bajulo/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/product_img.dart';
 
@@ -43,8 +44,8 @@ class _productDetailsState extends State<productDetails> {
             padding: EdgeInsets.only(right: 20),
             icon: Icon(Icons.favorite),
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const cart()));
+            //   Navigator.push(context,
+            //       MaterialPageRoute(builder: (context) => const wishlist()));
             },
           ),
         ],

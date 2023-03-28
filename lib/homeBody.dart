@@ -40,7 +40,7 @@ class _home_bodyState extends State<home_body> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 10, top: 20, bottom: 10),
+            margin: EdgeInsets.only(left: 15, top: 15, bottom: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -75,7 +75,7 @@ class _home_bodyState extends State<home_body> {
           category(),
           //product card
           Padding(
-            padding: const EdgeInsets.only(top: 25),
+            padding: const EdgeInsets.only(top: 20),
             child: Container(child: gridLayoutTrending()),
           ),
         ],

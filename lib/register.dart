@@ -309,7 +309,8 @@ class registerPage extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Widget028()));},
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
