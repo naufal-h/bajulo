@@ -10,11 +10,13 @@ import 'package:bajulo/layout%20gridview/categoryWomanBottom.dart';
 import 'package:bajulo/layout%20gridview/categoryWomanTop.dart';
 import 'package:bajulo/order_hist.dart';
 import 'package:bajulo/product_details.dart';
+import 'package:bajulo/settings.dart';
 import 'package:bajulo/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/notif.dart';
 import 'order_hist.dart';
 import 'policy.dart';
+import 'settings.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -158,7 +160,10 @@ class NavBar extends StatelessWidget {
               color: Theme.of(context).colorScheme.tertiary,
             ),
             title: Text('Settings'),
-            onTap: () => null,
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => settings()));
+            },
           ),
           Divider(),
           ListTile(
