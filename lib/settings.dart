@@ -19,19 +19,8 @@ class _settingsPageState extends State<settings> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text("Profile", style: TextStyle(fontFamily: "Poppins")),
+        title: Text("Settings", style: TextStyle(fontFamily: "Poppins")),
         centerTitle: true,
-        actions: [
-          IconButton(
-            padding: EdgeInsets.only(right: 20),
-            icon:
-                SvgPicture.asset('assets/icons/cart.svg', color: Colors.white),
-            onPressed: () => {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const cart()))
-            },
-          ),
-        ],
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,

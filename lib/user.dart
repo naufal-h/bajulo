@@ -1,6 +1,7 @@
 import 'package:bajulo/cart.dart';
 import 'package:bajulo/navbar.dart';
 import 'package:bajulo/order_hist.dart';
+import 'package:bajulo/settings.dart';
 import 'package:bajulo/wishlist.dart';
 import 'package:bajulo/wishlistUser.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -173,15 +174,23 @@ class _userPageState extends State<userPage> {
                           fontWeight: FontWeight.w600),
                     ),
                   ),
-                  userTile(
-                    onTap: () {},
-                    margin: EdgeInsets.only(top: 10),
-                    icon: Icon(
-                      Icons.settings,
-                      color: Colors.white,
+                  GestureDetector(
+                    onTap:() {
+                       Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => settings()),
+                      );
+                    },
+                    child: userTile(
+                      onTap: () {},
+                      margin: EdgeInsets.only(top: 10),
+                      icon: Icon(
+                        Icons.settings,
+                        color: Colors.white,
+                      ),
+                      title: 'Settings',
+                      subtitle: 'Customize your account preferences and options.',
                     ),
-                    title: 'Settings',
-                    subtitle: 'Customize your account preferences and options.',
                   ),
                   userTile(
                     margin: EdgeInsets.only(top: 0),
