@@ -21,17 +21,26 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<String?> _authUserSignUp(LoginData data) {
     print('Name: ${data.name}, Password: ${data.password}');
-    return Future.delayed(loginTime).then((_) {
-      Provider.of<Auth>(context, listen: false)
+    return Future.delayed(loginTime).then((_) async{
+      try {
+      await Provider.of<Auth>(context, listen: false)
           .signup(data.name, data.password);
+      } catch (err) {
+        return err.toString();
+      }
       return null;
     });
   }
 
   Future<String?> _authUserLogin(LoginData data) {
     print('Name: ${data.name}, Password: ${data.password}');
-    return Future.delayed(loginTime).then((_) {
-      Provider.of<Auth>(context, listen: false).login(data.name, data.password);
+    return Future.delayed(loginTime).then((_) async{
+      try {
+      await Provider.of<Auth>(context, listen: false)
+          .login(data.name, data.password);
+      } catch (err) {
+        return err.toString();
+      }
       return null;
     });
   }
@@ -62,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return FlutterLogin(
-      title: 'ECORP',
+      title: 'BajuLo',
       // logo: 'assets/images/ecorp-lightblue.png',
       onLogin: _authUserLogin,
       onSignup: _authUserSignUp,
