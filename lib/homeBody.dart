@@ -1,3 +1,4 @@
+import 'package:bajulo/CRUD/pages/home_page.dart';
 import 'package:bajulo/cart.dart';
 import 'package:bajulo/layout%20gridview/layoutgridTrending.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -33,6 +34,14 @@ class _home_bodyState extends State<home_body> {
             onPressed: () => {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const cart()))
+            },
+          ),
+          IconButton(
+            padding: EdgeInsets.only(right: 20),
+            icon: const Icon(Icons.add),
+            onPressed: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomePage()))
             },
           ),
         ],

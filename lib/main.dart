@@ -1,4 +1,5 @@
 import 'package:bajulo/login fix.dart';
+import 'package:bajulo/providers/players.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/const/tema.dart';
 import 'package:provider/provider.dart';
@@ -13,8 +14,8 @@ class myApp extends StatelessWidget {
     return MultiProvider(providers:[
     ChangeNotifierProvider(
       create: (ctx) => Auth()),
-    // ChangeNotifierProvider(
-    //   create: (ctx) => Products()),
+    ChangeNotifierProvider(
+      create: (ctx) => Players()),
 
     ],
     
