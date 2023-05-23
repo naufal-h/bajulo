@@ -128,6 +128,7 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade400,
       appBar: AppBar(title: const Text('Product Form')),
       body: _isLoading
           ? const Center(

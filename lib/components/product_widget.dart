@@ -77,6 +77,7 @@ class ProductData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey.shade400,
       margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
       child: ListTile(
         leading: SizedBox(

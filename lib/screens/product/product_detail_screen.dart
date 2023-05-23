@@ -6,6 +6,7 @@ import 'package:bajulo_new/components/util/snackbar_message.dart';
 import 'package:bajulo_new/controllers/product_controller.dart';
 import 'package:bajulo_new/models/cart.dart';
 import 'package:bajulo_new/models/product.dart';
+import 'package:bajulo_new/app_routes.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({Key? key}) : super(key: key);
@@ -92,8 +93,11 @@ class ProductDetailScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(16)),
                       elevation: 0,
                     ),
-                    onPressed: () => Provider.of<Cart>(context, listen: false)
-                        .addProduct(product, 1),
+                    onPressed: () {
+                      Provider.of<Cart>(context, listen: false)
+                          .addProduct(product, 1);
+                      Navigator.of(context).pushNamed(AppRoutes.cart);
+                    },
                     child: Text(
                       'Add To Cart',
                       style: TextStyle(

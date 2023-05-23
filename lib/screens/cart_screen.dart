@@ -17,11 +17,12 @@ class CartScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Cart"),
+        title: Text("Cart", style: TextStyle(fontFamily: "Poppins")),
+        centerTitle: true,
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
         children: [
-          CartResume(context: context, cart: cart),
           Expanded(
             child: ListView.builder(
               itemCount: products.length,
@@ -29,9 +30,9 @@ class CartScreen extends StatelessWidget {
                   ProductWidget(cartProduct: products[index]),
             ),
           ),
-          CartResume(context: context, cart: cart),
         ],
       ),
+      bottomNavigationBar: CartResume(context: context, cart: cart),
     );
   }
 }
@@ -90,19 +91,20 @@ class _CartResumeState extends State<CartResume> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.all(5),
+      margin: EdgeInsets.all(0),
+      color: Color(0xFF1F1F1F),
       child: Padding(
-        padding: const EdgeInsets.all(5),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Text(
               "Total",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             const SizedBox(width: 10),
             Chip(
-              backgroundColor: Theme.of(context).primaryColor,
+              backgroundColor: Colors.grey,
               label: Text(
                 'Rp.${widget.cart.totalAmount.toStringAsFixed(2)}',
                 style: TextStyle(

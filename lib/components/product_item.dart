@@ -46,6 +46,7 @@ class _ProductItemState extends State<ProductItem> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey.shade400,
       margin: const EdgeInsets.symmetric(horizontal: 3, vertical: 3),
       elevation: 1,
       child: ListTile(

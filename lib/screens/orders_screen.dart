@@ -42,6 +42,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
     final OrdersController ordersController = Provider.of(context);
 
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(title: const Text("My Orders")),
       drawer: const AppDrawer(),
       body: CustomLoading(context: context).builder(

@@ -40,6 +40,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
     final productList = Provider.of<ProductController>(context);
 
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: const Text('Manage Product'),
         actions: [

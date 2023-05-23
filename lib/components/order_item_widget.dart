@@ -17,6 +17,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey,
       child: Column(
         children: [
           ListTile(
