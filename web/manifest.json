@@ -1,6 +1,6 @@
 {
-    "name": "bajulo",
-    "short_name": "bajulo",
+    "name": "bajulo_new",
+    "short_name": "bajulo_new",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
