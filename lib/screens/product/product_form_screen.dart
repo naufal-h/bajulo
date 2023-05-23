@@ -129,7 +129,10 @@ class _ProductFormScreenState extends State<ProductFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade400,
-      appBar: AppBar(title: const Text('Product Form')),
+      appBar: AppBar(
+        title: Text("Product Form", style: TextStyle(fontFamily: "Poppins")),
+        centerTitle: true,
+      ),
       body: _isLoading
           ? const Center(
               child: CircularProgressIndicator.adaptive(),

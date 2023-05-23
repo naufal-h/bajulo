@@ -43,7 +43,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      appBar: AppBar(title: const Text("My Orders")),
+      appBar: AppBar(
+        title: Text("My Orders", style: TextStyle(fontFamily: "Poppins")),
+        centerTitle: true,
+      ),
       drawer: const AppDrawer(),
       body: CustomLoading(context: context).builder(
         condition: isLoading,

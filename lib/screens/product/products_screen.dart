@@ -42,7 +42,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: const Text('Manage Product'),
+        title: Text("Manage Product", style: TextStyle(fontFamily: "Poppins")),
+        centerTitle: true,
         actions: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
