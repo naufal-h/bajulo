@@ -36,7 +36,7 @@ class SnackBarMessage {
           duration: Duration(seconds: durationInSeconds),
           backgroundColor: messageType == MessageType.error
               ? Theme.of(context).colorScheme.error
-              : Theme.of(context).primaryColor,
+              : Colors.grey,
           action: action),
     );
   }
