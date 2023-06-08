@@ -106,7 +106,10 @@ class _CartResumeState extends State<CartResume> {
             Chip(
               backgroundColor: Colors.grey,
               label: Text(
-                'Rp.${widget.cart.totalAmount.toStringAsFixed(2)}',
+                'Rp. ${widget.cart.totalAmount.toString().replaceAllMapped(
+                      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                      (match) => '${match[1]}.',
+                    )}',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

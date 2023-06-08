@@ -166,7 +166,10 @@ class ProductDetailScreen extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.only(bottom: 14),
                   child: Text(
-                    'Rp. ${product.price}',
+                    'Rp. ${product.price.toString().replaceAllMapped(
+                          RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                          (match) => '${match[1]}.',
+                        )}',
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w700,

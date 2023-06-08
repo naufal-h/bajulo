@@ -80,7 +80,10 @@ class ProdutctGridItem extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           subtitle: Text(
-            'Rp. ${product.price}',
+            'Rp. ${product.price.toString().replaceAllMapped(
+                  RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                  (match) => '${match[1]}.',
+                )}',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           trailing: IconButton(

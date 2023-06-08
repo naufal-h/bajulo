@@ -29,7 +29,10 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                 });
               },
             ),
-            title: Text('Rp.${widget.order.total.toStringAsFixed(2)}'),
+            title: Text('Rp. ${widget.order.total.toString().replaceAllMapped(
+                  RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                  (match) => '${match[1]}.',
+                )}'),
             subtitle: Text(widget.order.id),
             trailing:
                 Text(DateFormat('dd/MM/yyyy hh:mm').format(widget.order.date)),

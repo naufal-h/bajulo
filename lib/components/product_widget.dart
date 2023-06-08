@@ -90,12 +90,19 @@ class ProductData extends StatelessWidget {
         ),
         title: Text(cartProduct.productName),
         subtitle: Text(
-            'Total: Rp. ${(cartProduct.quantity * cartProduct.productPrice).toStringAsFixed(2)}'),
+            'Total: Rp. ${(cartProduct.quantity * cartProduct.productPrice).toString().replaceAllMapped(
+                  RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                  (match) => '${match[1]}.',
+                )}'),
         trailing: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Text('Total: Rp. ${cartProduct.productPrice}'),
+            Text(
+                'Total: Rp. ${cartProduct.productPrice.toString().replaceAllMapped(
+                      RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'),
+                      (match) => '${match[1]}.',
+                    )}'),
             Text('Qty: ${cartProduct.quantity}x')
           ],
         ),
