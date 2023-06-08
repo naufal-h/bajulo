@@ -89,19 +89,133 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           ),
         ],
       ),
-      body: CustomLoading(context: context).builder(
+      body: CustomLoading(
+        context: context,
+      ).builder(
         condition: _isLoading,
         loadingMessage: 'Loading products...',
         showReloadButton: _reload,
         reloadMessage: _reloadMessage,
         reloadButtonLabel: 'Load again',
         reloadMethod: _loadProducts,
-        child: RefreshIndicator(
-          onRefresh: () => _loadProducts(),
-          child: ProductGrid(showOnlyFavorites: _showOnlyFavorites),
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 15, top: 15, bottom: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "Trending",
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            CarouselSlider(
+              options: CarouselOptions(height: 152.0),
+              items: [6, 7, 8].map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Container(
+                      width: MediaQuery.of(context).size.width,
+                      margin: EdgeInsets.symmetric(horizontal: 5.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/asset $i.jpg"),
+                              fit: BoxFit.fitWidth)),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 30,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  categoryProduct(
+                    press: () => {},
+                    text: "New Arrival",
+                  ),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
+                  categoryProduct(
+                    press: () => {},
+                    text: "Men",
+                  ),
+                  SizedBox(
+                    width: 0,
+                  ),
+                  categoryProduct(
+                    press: () => {},
+                    text: "Womens",
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  categoryProduct(
+                    press: () => {},
+                    text: "All",
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: RefreshIndicator(
+                onRefresh: () => _loadProducts(),
+                child: ProductGrid(showOnlyFavorites: _showOnlyFavorites),
+              ),
+            ),
+          ],
         ),
       ),
       drawer: const AppDrawer(),
+    );
+  }
+}
+
+class categoryProduct extends StatelessWidget {
+  const categoryProduct({
+    super.key,
+    required this.text,
+    required this.press,
+  });
+  final String text;
+  final VoidCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: GestureDetector(
+        onTap: press,
+        child: Container(
+          child: Chip(
+              backgroundColor: Theme.of(context).primaryColor,
+              label: Row(
+                children: [
+                  Text(
+                    text,
+                  ),
+                  SizedBox(
+                    width: 50,
+                  )
+                ],
+              )),
+        ),
+      ),
     );
   }
 }
