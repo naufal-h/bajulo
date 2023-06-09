@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:bajulo_new/app_routes.dart';
-import 'package:bajulo_new/components/app_drawer.dart';
-import 'package:bajulo_new/components/product_item.dart';
-import 'package:bajulo_new/components/util/custom_loading.dart';
-import 'package:bajulo_new/components/util/custom_return.dart';
-import 'package:bajulo_new/controllers/product_controller.dart';
+import 'package:bajulo/app_routes.dart';
+import 'package:bajulo/components/app_drawer.dart';
+import 'package:bajulo/components/product_item.dart';
+import 'package:bajulo/components/util/custom_loading.dart';
+import 'package:bajulo/components/util/custom_return.dart';
+import 'package:bajulo/controllers/product_controller.dart';
 
 class ProductsScreen extends StatefulWidget {
   const ProductsScreen({Key? key}) : super(key: key);

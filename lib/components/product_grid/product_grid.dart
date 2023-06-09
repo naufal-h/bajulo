@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:bajulo_new/components/product_grid/product_grid_item.dart';
+import 'package:bajulo/components/product_grid/product_grid_item.dart';
 
 import '../../models/product.dart';
 import '../../controllers/product_controller.dart';

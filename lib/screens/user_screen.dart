@@ -1,11 +1,11 @@
 import '../app_routes.dart';
 import 'package:provider/provider.dart';
 import '../controllers/auth_controller.dart';
-import 'package:bajulo_new/components/app_drawer.dart';
+import 'package:bajulo/components/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
-import 'package:bajulo_new/components/cart/cart_button.dart';
-import 'package:bajulo_new/components/user_tile.dart';
+import 'package:bajulo/components/cart/cart_button.dart';
+import 'package:bajulo/components/user_tile.dart';
 
 class UserScreen extends StatefulWidget {
   @override

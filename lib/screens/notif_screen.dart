@@ -1,8 +1,8 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
-import 'package:bajulo_new/components/cart/cart_button.dart';
+import 'package:bajulo/components/cart/cart_button.dart';
 import 'package:intl/intl.dart';
-import 'package:bajulo_new/components/app_drawer.dart';
+import 'package:bajulo/components/app_drawer.dart';
 
 class NotifScreen extends StatefulWidget {
   const NotifScreen({super.key});

@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:bajulo_new/components/app_drawer.dart';
-import 'package:bajulo_new/components/cart/cart_button.dart';
-import 'package:bajulo_new/components/util/custom_loading.dart';
-import 'package:bajulo_new/components/util/custom_return.dart';
-import 'package:bajulo_new/controllers/product_controller.dart';
+import 'package:bajulo/components/app_drawer.dart';
+import 'package:bajulo/components/cart/cart_button.dart';
+import 'package:bajulo/components/util/custom_loading.dart';
+import 'package:bajulo/components/util/custom_return.dart';
+import 'package:bajulo/controllers/product_controller.dart';
 import '../../components/product_grid/product_grid.dart';
 
 enum FilterOptions { all, onlyFavorites }

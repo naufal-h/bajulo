@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:bajulo_new/models/cart.dart';
+import 'package:bajulo/models/cart.dart';
 
 import '../../app_routes.dart';
 

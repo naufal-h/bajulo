@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bajulo_new">
+    package="com.example.bajulo">
    <application
-        android:label="bajulo_new"
+        android:label="bajulo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

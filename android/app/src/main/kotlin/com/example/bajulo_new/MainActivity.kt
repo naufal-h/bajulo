@@ -1,4 +1,4 @@
-package com.example.bajulo_new
+package com.example.bajulo
 
 import io.flutter.embedding.android.FlutterActivity
 

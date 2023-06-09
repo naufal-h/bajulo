@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:bajulo_new/app_routes.dart';
-import 'package:bajulo_new/components/util/exception_handler.dart';
-import 'package:bajulo_new/components/util/snackbar_message.dart';
-import 'package:bajulo_new/controllers/product_controller.dart';
-import 'package:bajulo_new/models/cart.dart';
-import 'package:bajulo_new/models/product.dart';
+import 'package:bajulo/app_routes.dart';
+import 'package:bajulo/components/util/exception_handler.dart';
+import 'package:bajulo/components/util/snackbar_message.dart';
+import 'package:bajulo/controllers/product_controller.dart';
+import 'package:bajulo/models/cart.dart';
+import 'package:bajulo/models/product.dart';
 
 class ProdutctGridItem extends StatelessWidget {
   const ProdutctGridItem({Key? key}) : super(key: key);

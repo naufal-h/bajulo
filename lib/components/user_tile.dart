@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:bajulo_new/const/tema.dart';
-import 'package:bajulo_new/main.dart';
+import 'package:bajulo/const/tema.dart';
+import 'package:bajulo/main.dart';
 
 class userTile extends StatelessWidget {
   final Widget icon;

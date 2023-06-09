@@ -1,7 +1,7 @@
-import 'package:bajulo_new/screens/product/products_overview_screen.dart';
-import 'package:bajulo_new/screens/notif_screen.dart';
-import 'package:bajulo_new/screens/search_screen.dart';
-import 'package:bajulo_new/screens/user_screen.dart';
+import 'package:bajulo/screens/product/products_overview_screen.dart';
+import 'package:bajulo/screens/notif_screen.dart';
+import 'package:bajulo/screens/search_screen.dart';
+import 'package:bajulo/screens/user_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNav extends StatefulWidget {

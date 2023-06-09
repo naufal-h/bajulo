@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:bajulo_new/components/app_drawer.dart';
+import 'package:bajulo/components/app_drawer.dart';
 
 class SearchScreen extends StatelessWidget {
   List<Map<String, dynamic>> riwayat = [
