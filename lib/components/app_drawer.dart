@@ -8,6 +8,7 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Provider.of(context);
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -107,16 +108,21 @@ class AppDrawer extends StatelessWidget {
             onTap: () =>
                 Navigator.of(context).pushReplacementNamed(AppRoutes.orders),
           ),
-          Divider(),
-          ListTile(
-            leading: Icon(
-              Icons.mode_edit_sharp,
-              color: Theme.of(context).colorScheme.tertiary,
+          if (authController.authData.email == "admin@gmail.com")
+            Column(
+              children: [
+                Divider(),
+                ListTile(
+                  leading: Icon(
+                    Icons.mode_edit_sharp,
+                    color: Theme.of(context).colorScheme.tertiary,
+                  ),
+                  title: Text("Edit Products"),
+                  onTap: () => Navigator.of(context)
+                      .pushReplacementNamed(AppRoutes.products),
+                ),
+              ],
             ),
-            title: Text("Edit Products"),
-            onTap: () =>
-                Navigator.of(context).pushReplacementNamed(AppRoutes.products),
-          ),
           Divider(),
           ListTile(
             leading: Icon(
