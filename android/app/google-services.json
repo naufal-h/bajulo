@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "252799961958",
+    "firebase_url": "https://cruud-b06af-default-rtdb.firebaseio.com",
+    "project_id": "cruud-b06af",
+    "storage_bucket": "cruud-b06af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252799961958:android:f34510928d1dba37e1d6a7",
+        "android_client_info": {
+          "package_name": "com.example.bajulo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252799961958-ol8dvmi2vcstjkba1ruruga9hvtvd2p2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0m0MqnvayOf3Jwym5pVnFBAf1NcMv8bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252799961958-ol8dvmi2vcstjkba1ruruga9hvtvd2p2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "252799961958-si33t4dcl8uj972nturtckgqmpt7vla4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bajuloNew"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

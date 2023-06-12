@@ -1,3 +1,8 @@
+import 'dart:io';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import '../app_routes.dart';
 import 'package:provider/provider.dart';
 import '../controllers/auth_controller.dart';
@@ -5,6 +10,7 @@ import 'package:bajulo/components/app_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:bajulo/components/cart/cart_button.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:bajulo/components/user_tile.dart';
 
 class UserScreen extends StatefulWidget {
@@ -15,6 +21,8 @@ class UserScreen extends StatefulWidget {
 class _UserScreenState extends State<UserScreen> {
   @override
   Widget build(BuildContext context) {
+    AuthController authController = Provider.of(context);
+    var imageUrl = "";
     return Scaffold(
       drawer: AppDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
@@ -34,35 +42,121 @@ class _UserScreenState extends State<UserScreen> {
               child: Column(
                 children: [
                   Container(
-                    width: 96,
-                    height: 96,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.grey,
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/pfp.jpg'),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 4, top: 14),
+                    margin: EdgeInsets.only(bottom: 15),
                     child: Text(
-                      'Uzui Tengen',
+                      'Welcome',
                       style: TextStyle(
                           color: Theme.of(context).colorScheme.background,
                           fontWeight: FontWeight.w600,
                           fontSize: 16),
                     ),
                   ),
-                  Text(
-                    '@UzuiTengen',
-                    style: TextStyle(
-                        color: Theme.of(context)
-                            .colorScheme
-                            .background
-                            .withOpacity(0.6),
-                        fontSize: 14),
+
+                  Stack(
+                    children: [
+                      SizedBox(
+                        width: 120,
+                        height: 120,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(100),
+                          child: Image(
+                            image: NetworkImage(FirebaseAuth
+                                    .instance.currentUser?.photoURL ??
+                                'https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: Container(
+                          width: 35,
+                          height: 35,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(100),
+                            color: Color.fromRGBO(188, 206, 236, 1),
+                          ),
+                          child: IconButton(
+                            onPressed: () async {
+                              // /Step 1:Pick image/
+                              //Install image_picker
+                              //Import the corresponding library
+
+                              ImagePicker imagePicker = ImagePicker();
+                              XFile? file = await imagePicker.pickImage(
+                                  source: ImageSource.gallery);
+                              print('${file?.path}');
+
+                              if (file == null) return;
+                              //Import dart:core
+                              String uniqueFileName = DateTime.now()
+                                  .millisecondsSinceEpoch
+                                  .toString();
+
+                              // /Step 2: Upload to Firebase storage/
+                              //Install firebase_storage
+                              //Import the library
+
+                              //Get a reference to storage root
+                              Reference referenceRoot =
+                                  FirebaseStorage.instance.ref();
+                              Reference referenceDirImages =
+                                  referenceRoot.child('images');
+
+                              //Create a reference for the image to be stored
+                              Reference referenceImageToUpload =
+                                  referenceDirImages.child(uniqueFileName);
+
+                              //Handle errors/success
+                              try {
+                                //Store the file
+                                await referenceImageToUpload
+                                    .putFile(File(file.path));
+                                //Success: get the download URL
+                                imageUrl = await referenceImageToUpload
+                                    .getDownloadURL();
+                                await FirebaseAuth.instance.currentUser!
+                                    .updatePhotoURL(imageUrl);
+                              } catch (error) {
+                                //Some error occurred
+                              }
+                              setState(() {});
+                            },
+                            icon: Icon(
+                              LineAwesomeIcons.camera,
+                              color: Colors.black,
+                              size: 20,
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+
+                  // Container(
+                  //   width: 96,
+                  //   height: 96,
+                  //   margin: EdgeInsets.only(bottom: 15),
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(100),
+                  //     color: Colors.grey,
+                  //     image: DecorationImage(
+                  //       image: AssetImage('assets/images/pfp.jpg'),
+                  //       fit: BoxFit.cover,
+                  //     ),
+                  //   ),
+                  // ),
+
+                  Container(
+                    // margin: EdgeInsets.only(bottom: 15),
+                    child: Text(
+                      authController.authData.email!.split('@')[0],
+                      style: TextStyle(
+                          color: Colors.grey.shade500,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16),
+                    ),
                   ),
                 ],
               ),

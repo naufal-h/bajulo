@@ -1,6 +1,8 @@
 import 'package:bajulo/screens/search_screen.dart';
 import 'package:bajulo/screens/user_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
 import 'package:bajulo/const/tema.dart';
 import 'package:bajulo/app_routes.dart';
@@ -18,10 +20,14 @@ import 'package:bajulo/screens/product/products_overview_screen.dart';
 import 'package:bajulo/screens/screen_not_found.dart';
 import 'package:bajulo/screens/notif_screen.dart';
 import 'package:bajulo/components/bottom_nav.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 import 'models/cart.dart';
 
-void main() {
+ Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
   runApp(const MyApp());
 }
 
